@@ -1,0 +1,27 @@
+(defwidget labeled-circular-progress [text value]
+  (overlay
+    (circular-progress :start-at 75 :thickness 5
+                       :value value)
+    text))
+
+(defwidget stats []
+  (box :orientation "vertical"
+    (box :orientation "horizontal"
+      (labeled-circular-progress :text "CPU" :value {EWW_CPU.avg})
+      (labeled-circular-progress :text "RAM" :value {EWW_RAM.used_mem_perc}))
+    (box :orientation "horizontal"
+      (labeled-circular-progress :text "TMP" :value {EWW_TEMPS.THERMAL_ZONE0.temperature})
+      (labeled-circular-progress :text "BAT" :value {EWW_BATTERY.BAT0.capacity}))
+    (box :orientation "horizontal"
+      (labeled-circular-progress :text "SDD" :value {EWW_DISK["/"].used_perc})
+      (labeled-circular-progress :text "NET" :value {EWW_NET.WLO1.up}))))
+
+(defwindow test
+           :monitor 0
+           :geometry (geometry :width "25%" :height "25%"
+                              :anchor "center")
+           :stacking "fg"
+           :windowtype "normal"
+           :wm-ignore false
+  (stats))
+

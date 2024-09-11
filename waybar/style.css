@@ -1,0 +1,145 @@
+/*
+rosewater:	#f4dbd6;
+flamingo:	#f0c6c6;
+pink:		#f5bde6;
+mauve:		#c6a0f6;
+red:		#ed8796;
+maroon:		#ee99a0;
+peach:		#f5a97f;
+yellow:		#eed49f;
+green:		#a6da95;
+teal:		#8bd5ca;
+sky:		#91d7e3;
+sapphire:	#7dc4e4;
+blue:		#8aadf4;
+lavender:	#b7bdf8;
+text:		#cad3f5;
+subtext1:	#b8c0e0;
+subtext0:	#a5adcb;
+overlay2:	#939ab7;
+overlay1:	#8087a2;
+overlay0:	#6e738d;
+surface2:	#5b6078;
+surface1:	#494d64;
+surface0:	#363a4f;
+base:		#24273a;
+mantle:		#1e2030;
+crust:		#181926;
+*/
+
+* {
+    font-family: Hack Nerd Font;
+}
+
+window#waybar {
+    background: transparent;
+    color: #cad3f5;
+}
+
+tooltip,
+.modules-left,
+.modules-right {
+    background: #24253a;
+    border-radius: 10px;
+    border-color: #363a4f;
+    border-style: solid;
+    border-width: 1px;
+    padding-left: 2.5px;
+    padding-right: 2.5px;
+}
+
+tooltip {
+    background: #181926;
+}
+tooltip label {
+    color: #cad3f5;
+}
+
+.modules-left {
+    padding-right: 0px;
+}
+
+#custom-cat,
+#workspaces,
+#tray,
+#bluetooth.connected,
+#network,
+#pulseaudio,
+#backlight,
+#cpu,
+#temperature,
+#memory,
+#disk,
+#battery,
+#clock {
+    background: #181926;
+    border-radius: 7.5px;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+    margin-top: 2.5px;
+    margin-bottom: 2.5px;
+}
+
+#custom-cat {
+   font-size: 20px;
+   background: #cad3f5;
+   border-radius: 360px;
+   margin: 3px;
+   padding: 5px;
+}
+
+#workspaces {
+   padding-left: 0px;
+   padding-right: 0px;
+}
+
+#tray {
+    margin-right: 2.5px;
+}
+
+#tray menu {
+    background: #181926;
+    color: #cad3f5;
+    border-radius: 10px;
+}
+
+#temperature.critical {
+    background: #ed8796;
+    color: #181926;
+}
+
+#battery.warning {
+    background: #f5a97f;
+    color: #181926;
+}
+#battery.critical {
+    background: #ed8796;
+    color: #181926;
+}
+
+#battery.charging {
+    background: #a6da95;
+    color: #181926;
+}
+
+#workspaces button {
+    color: #6e738d;
+    border-radius: 7.5px;
+    background: #181926;
+    border-width: 0px;
+}
+
+#workspaces button.active {
+    color: #cad3f5;
+}
+
+#workspaces button.urgent {
+   color: #181926;
+   background: #ed8796;
+}
+
+#workspaces button:hover {
+    color: #181926;
+    background: #cad3f5;
+}
+

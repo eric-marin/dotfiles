@@ -1,0 +1,22 @@
+layer=overlay
+background-color=#181926
+border-size=1
+border-color=#363a4f
+border-radius=10
+default-timeout=5000
+ignore-timeout=1
+font=Noto Color Emoji 10, Sazanami Gothic 10, Hack Nerd Font 10
+text-color=#cad3f5
+outer-margin=0,5,15,0
+anchor=bottom-right
+
+[urgency=high]
+border-color=#ed8796
+default-timeout=0
+
+[category=mpd]
+default-timeout=2000
+group-by=category
+
+[app-name="Steam"]
+invisible=1

@@ -43,25 +43,21 @@ local config = function()
       completion = true,
     },
   })
-
   -- clangd server configuration
   lspconfig.clangd.setup({
     on_attach = on_attach,
     capabilities = capabilities,
   })
-
   -- rust analyzer server configuration
   lspconfig.rust_analyzer.setup({
     on_attach = on_attach,
     capabilities = capabilities,
   })
-
   -- cmake-language-server configuration
   lspconfig.cmake.setup({
     on_attach = on_attach,
     capabilities = capabilities,
   })
-
   -- haskell-language-server configuration
   lspconfig.hls.setup({
     on_attach = on_attach,
@@ -69,6 +65,11 @@ local config = function()
   })
   -- lua-language-server
   lspconfig.lua_ls.setup({
+    on_attach = on_attach,
+    capabilities = capabilities,
+  })
+  -- nixd configuration
+  lspconfig.nixd.setup({
     on_attach = on_attach,
     capabilities = capabilities,
   })

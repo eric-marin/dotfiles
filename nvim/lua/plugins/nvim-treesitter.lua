@@ -18,7 +18,8 @@ local config = function()
       "cpp",
       "rust",
       "haskell",
-      "nix"
+      "nix",
+      "javascript"
     },
     auto_install = false,
     highlight = {

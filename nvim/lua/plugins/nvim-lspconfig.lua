@@ -69,7 +69,12 @@ local config = function()
     capabilities = capabilities,
   })
   -- nixd configuration
-  lspconfig.nixd.setup({
+  -- lspconfig.nixd.setup({
+  -- on_attach = on_attach,
+  -- capabilities = capabilities,
+  -- })
+  -- typescript-language-server
+  lspconfig.ts_ls.setup({
     on_attach = on_attach,
     capabilities = capabilities,
   })

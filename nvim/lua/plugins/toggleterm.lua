@@ -1,6 +1,6 @@
 local init = function()
   local keymap = vim.keymap
-  keymap.set("n", "<C-t>", ":ToggleTerm<Enter>:startinsert<Enter>",
+  keymap.set("n", "<C-t>", ":ToggleTerm<Enter>",
     { noremap = true, silent = true, desc = "Terminal (ToggleTerm)" }) -- Terminal
   keymap.set("t", "<C-t>", "<C-\\><C-n>:ToggleTerm<Enter>")
   keymap.set("n", "<Space>g", ":ToggleLazyGit<Enter>",
@@ -11,9 +11,9 @@ local config = function()
   require("toggleterm").setup {
     autochdir = false,
     direction = "float",
-    -- open_mapping = [[<c-t>]],
-    -- terminal_mappings = true,
-    start_in_insert = false,
+    open_mapping = [[<c-t>]],
+    terminal_mappings = true,
+    start_in_insert = true,
     float_opts = {
       border = "curved",
     },

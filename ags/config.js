@@ -12,4 +12,3 @@ const Bar = () => Widget.Window({
 })
 
 App.config({ windows: [Bar()] })
-

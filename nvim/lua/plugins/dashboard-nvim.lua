@@ -189,6 +189,11 @@ Quotes = {
     "",
     "Quiet people have the loudest minds.",
     "~ Stephen Hawking",
+  },
+  {
+    "",
+    "An idiot admires complexity, a genius admires simplicity.",
+    "~ Terry Davis",
   }
 }
 

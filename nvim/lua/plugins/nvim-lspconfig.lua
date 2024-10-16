@@ -11,15 +11,28 @@ local config = function()
 
   local on_attach = function(client, bufnr)
     local keymap = vim.keymap
-    local opts = { noremap = true, silent = true, buffer = bufnr }
+    local lsp = vim.lsp
+    local opts = { noremap = true, silent = true, buffer = bufnr, desc = "" }
 
     -- setting custom keymaps
-    keymap.set("n", "<Space>lf", ":Lspsaga finder<Enter>", opts)          -- go to definition
-    keymap.set("n", "<Space>lp", ":Lspsaga peek_definition<Enter>", opts) -- peak definition
-    keymap.set("n", "<Space>lg", ":Lspsaga goto_definition<Enter>", opts) -- go to definition
-    keymap.set("n", "<Space>la", ":Lspsaga code_action<Enter>", opts)     -- see available code actions
-    keymap.set("n", "<Space>lr", ":Lspsaga rename<Enter>", opts)          -- smart rename
-    keymap.set("n", "<Space>ld", ":Lspsaga hover_doc<Enter>", opts)       -- show documentation for what is under cursor
+    opts.desc = "Finder"
+    keymap.set("n", "<Space>lf", ":Lspsaga finder<Enter>", opts)                     -- go to definition
+    opts.desc = "Peek Definition (Lspsaga)"
+    keymap.set("n", "<Space>lp", ":Lspsaga peek_definition<Enter>", opts)            -- peak definition
+    opts.desc = "Goto Definition (Lspsaga)"
+    keymap.set("n", "<Space>lg", ":Lspsaga goto_definition<Enter>", opts)            -- go to definition
+    opts.desc = "Code Action (Lspsaga)"
+    keymap.set("n", "<Space>la", ":Lspsaga code_action<Enter>", opts)                -- see available code actions
+    opts.desc = "Rename (Lspsaga)"
+    keymap.set("n", "<Space>lr", ":Lspsaga rename<Enter>", opts)                     -- smart rename
+    opts.desc = "Hover Documentation (Lspsaga)"
+    keymap.set("n", "<Space>lk", lsp.buf.hover, opts)                                -- show documentation for what is under cursor
+    opts.desc = "Outline (Lspsaga)"
+    keymap.set("n", "<Space>lo", ":Lspsaga outline<Enter>", opts)                    -- show outline
+    opts.desc = "Diagnostic (Lspsaga)"
+    keymap.set("n", "<Space>ld", ":Lspsaga show_workspace_diagnostics<Enter>", opts) -- show diagnostics
+
+    keymap.del("n", "K", { buffer = bufnr })
 
     -- enable auto formatting on save
     if client.supports_method("textDocument/formatting") then
@@ -33,16 +46,16 @@ local config = function()
   end
 
   -- efm server configuration
-  lspconfig.efm.setup({
-    init_options = {
-      documentFormatting = true,
-      documentRangeFormatting = true,
-      hover = true,
-      documentSymbol = true,
-      codeAction = true,
-      completion = true,
-    },
-  })
+  -- lspconfig.efm.setup({
+  --   init_options = {
+  --     documentFormatting = true,
+  --     documentRangeFormatting = true,
+  --     hover = true,
+  --     documentSymbol = true,
+  --     codeAction = true,
+  --     completion = true,
+  --   },
+  -- })
   -- clangd server configuration
   lspconfig.clangd.setup({
     on_attach = on_attach,
@@ -63,20 +76,31 @@ local config = function()
     on_attach = on_attach,
     capabilities = capabilities,
   })
-  -- lua-language-server
+  -- lua-language-server configuration
   lspconfig.lua_ls.setup({
     on_attach = on_attach,
     capabilities = capabilities,
   })
   -- nixd configuration
-  -- lspconfig.nixd.setup({
-  -- on_attach = on_attach,
-  -- capabilities = capabilities,
-  -- })
-  -- typescript-language-server
+  lspconfig.nixd.setup({
+    on_attach = on_attach,
+    capabilities = capabilities,
+  })
+  -- typescript-language-server configuration
   lspconfig.ts_ls.setup({
     on_attach = on_attach,
     capabilities = capabilities,
+  })
+  -- cssls-language-server configuration
+  lspconfig.cssls.setup({
+    on_attach = on_attach,
+    capabilities = capabilities,
+  })
+  -- vacuum configuration
+  lspconfig.vacuum.setup({
+    on_attach = on_attach,
+    capabilities = capabilities,
+    filetypes = { "yaml", "json" }
   })
 end
 

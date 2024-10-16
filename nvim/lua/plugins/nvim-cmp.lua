@@ -35,13 +35,15 @@ local config = function()
     },
     sources = cmp.config.sources(
       {
+        { name = "lazydev", group_index = 0 }
+      }, {
+        { name = "neorg" }
+      }, {
         { name = "nvim_lsp" },
       }, {
         { name = "buffer" },
       }, {
         { name = "path" },
-      }, {
-        { name = "lazydev", group_index = 0 }
       }
     )
   })

@@ -1,9 +1,5 @@
-return {
-  "folke/todo-comments.nvim",
-  dependencies = { "nvim-lua/plenary.nvim" },
-  lazy = true,
-  event = { "BufReadPost", "BufWritePost", "BufNewFile" },
-  opts = {
+local config = function()
+  require("todo-comments").setup({
     keywords = {
       FIX  = { icon = "", color = "error", alt = { "FIXME", "BUG", "FIXIT", "ISSUE" } },
       TODO = { icon = "", color = "info" },
@@ -22,7 +18,15 @@ return {
       hack = "#F5A97F",
       perf = "#C6A0F6"
     }
-  }
+  })
+end
+
+return {
+  "folke/todo-comments.nvim",
+  dependencies = { "nvim-lua/plenary.nvim" },
+  lazy = true,
+  event = { "BufReadPost", "BufWritePost", "BufNewFile" },
+  config = config
 }
 
 -- FIX: ciao

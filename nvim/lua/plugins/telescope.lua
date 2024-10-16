@@ -1,17 +1,18 @@
 local init = function()
   local keymap = vim.keymap
-  keymap.set("n", "<Space>tk", ":Telescope keymaps<Enter>",
-    { noremap = true, silent = true, desc = "Keymaps (Telescope)" })      -- Keymaps
-  keymap.set("n", "<Space>th", ":Telescope help_tags<Enter>",
-    { noremap = true, silent = true, desc = "Help (Telescope)" })         -- Help
-  keymap.set("n", "<Space>tf", ":Telescope find_files<Enter>",
-    { noremap = true, silent = true, desc = "Find files (Telescope)" })   -- Find files
-  keymap.set("n", "<Space>ta", ":Telescope<Enter>",
-    { noremap = true, silent = true, desc = "All commands (Telescope)" }) -- All commands
-  keymap.set("n", "<Space>tg", ":Telescope live_grep<Enter>",
-    { noremap = true, silent = true, desc = "Find words (Telescope)" })   -- Find words
-  keymap.set("n", "<Space>tb", ":Telescope buffers<Enter>",
-    { noremap = true, silent = true, desc = "Buffers (Telescope)" })      -- Buffers
+  local opts = { noremap = true, silent = true, desc = "" }
+  opts.desc = "Keymaps (Telescope)"
+  keymap.set("n", "<Space>tk", ":Telescope keymaps<Enter>", opts)    -- Keymaps
+  opts.desc = "Help (Telescope)"
+  keymap.set("n", "<Space>th", ":Telescope help_tags<Enter>", opts)  -- Help
+  opts.desc = "Find files (Telescope)"
+  keymap.set("n", "<Space>tf", ":Telescope find_files<Enter>", opts) -- Find files
+  opts.desc = "All commands (Telescope)"
+  keymap.set("n", "<Space>ta", ":Telescope<Enter>", opts)            -- All commands
+  opts.desc = "Find words (Telescope)"
+  keymap.set("n", "<Space>tg", ":Telescope live_grep<Enter>", opts)  -- Find words
+  opts.desc = "Buffers (Telescope)"
+  keymap.set("n", "<Space>tb", ":Telescope buffers<Enter>", opts)    -- Buffers
 end
 
 local config = function()

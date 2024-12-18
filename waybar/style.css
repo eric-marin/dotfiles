@@ -28,35 +28,36 @@ crust:		#181926;
 */
 
 * {
-    font-family: Hack Nerd Font;
+  font-family: Hack Nerd Font;
 }
 
 window#waybar {
-    background: transparent;
-    color: #cad3f5;
+  background: transparent;
+  color: #cad3f5;
 }
 
 tooltip,
 .modules-left,
 .modules-right {
-    background: #24253a;
-    border-radius: 10px;
-    border-color: #363a4f;
-    border-style: solid;
-    border-width: 1px;
-    padding-left: 2.5px;
-    padding-right: 2.5px;
+  background: #24253a;
+  border-radius: 10px;
+  border-color: #ed8796;
+  border-style: solid;
+  border-width: 1px;
+  padding-left: 2px;
+  padding-right: 2px;
 }
 
 tooltip {
-    background: #181926;
+  background: #181926;
 }
+
 tooltip label {
-    color: #cad3f5;
+  color: #cad3f5;
 }
 
 .modules-left {
-    padding-right: 0px;
+  padding-right: 0px;
 }
 
 #custom-cat,
@@ -72,74 +73,76 @@ tooltip label {
 #disk,
 #battery,
 #clock {
-    background: #181926;
-    border-radius: 7.5px;
-    padding-left: 7.5px;
-    padding-right: 7.5px;
-    margin-top: 2.5px;
-    margin-bottom: 2.5px;
+  /*background: #181926;*/
+  border-radius: 7px;
+  padding-left: 7px;
+  padding-right: 7px;
+  margin-top: 2px;
+  margin-bottom: 2px;
 }
 
 #custom-cat {
-   font-size: 20px;
-   background: #cad3f5;
-   border-radius: 360px;
-   margin: 3px;
-   padding: 5px;
+  font-size: 22px;
+  background: #cad3f5;
+  border-radius: 7px;
+  margin: 3px;
+  margin-left: 1px;
+  margin-right: 3px;
+  padding: 5px;
 }
 
 #workspaces {
-   padding-left: 0px;
-   padding-right: 0px;
+  padding: 0px;
+  margin: 3px;
 }
 
 #tray {
-    margin-right: 2.5px;
+  margin-right: 2px;
 }
 
 #tray menu {
-    background: #181926;
-    color: #cad3f5;
-    border-radius: 10px;
+  background: #181926;
+  color: #cad3f5;
+  border-radius: 10px;
 }
 
 #temperature.critical {
-    background: #ed8796;
-    color: #181926;
+  background: #ed8796;
+  color: #181926;
 }
 
 #battery.warning {
-    background: #f5a97f;
-    color: #181926;
+  background: #f5a97f;
+  color: #181926;
 }
+
 #battery.critical {
-    background: #ed8796;
-    color: #181926;
+  background: #ed8796;
+  color: #181926;
 }
 
 #battery.charging {
-    background: #a6da95;
-    color: #181926;
+  background: #a6da95;
+  color: #181926;
 }
 
 #workspaces button {
-    color: #6e738d;
-    border-radius: 7.5px;
-    background: #181926;
-    border-width: 0px;
+  color: #6e738d;
+  border-radius: 7px;
+  /*background: #181926;*/
+  border-width: 0px;
 }
 
 #workspaces button.active {
-    color: #cad3f5;
+  color: #cad3f5;
 }
 
 #workspaces button.urgent {
-   color: #181926;
-   background: #ed8796;
+  color: #181926;
+  background: #ed8796;
 }
 
 #workspaces button:hover {
-    color: #181926;
-    background: #cad3f5;
+  color: #181926;
+  background: #cad3f5;
 }
-

@@ -30,7 +30,7 @@ vim.api.nvim_set_keymap("n", "<C-c>", "gcc", { noremap = false })
 vim.api.nvim_set_keymap("v", "<C-c>", "gcc<Esc>", { noremap = false })
 
 -- Buffer kill
-keymap.set("n", "<C-q>", ":bdelete!<Enter>", opts)
+-- keymap.set("n", "<C-q>", ":bunload<Enter>", opts)
 
 -- Working
 keymap.set("n", "<C-s>", ":w<Enter>", opts)

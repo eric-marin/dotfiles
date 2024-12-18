@@ -4,9 +4,8 @@ local init = function()
     { noremap = true, silent = true, desc = "File browser (Oil)" }) -- Oil
 end
 
-
-
 local config = function()
+  local detail = false
   require("oil").setup({
     default_file_explorer = true,
     delete_to_trash = true,
@@ -23,6 +22,17 @@ local config = function()
       ["bs"] = "actions.change_sort",
       ["b."] = "actions.toggle_hidden",
       ["bt"] = "actions.toggle_trash",
+      ["bd"] = {
+        desc = "Toggle file detail view",
+        callback = function()
+          detail = not detail
+          if detail then
+            require("oil").set_columns({ "icon", "permissions", "size", "mtime" })
+          else
+            require("oil").set_columns({ "icon" })
+          end
+        end,
+      },
     },
     use_default_keymaps = false,
   })

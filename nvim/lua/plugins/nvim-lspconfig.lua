@@ -98,9 +98,9 @@ local config = function()
   })
   -- vacuum configuration
   lspconfig.vacuum.setup({
-    on_attach = on_attach,
+    -- on_attach = on_attach,
     capabilities = capabilities,
-    filetypes = { "yaml", "json" }
+    filetypes = { "yaml" }
   })
 end
 

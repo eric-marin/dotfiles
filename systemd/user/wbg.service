@@ -1,0 +1,8 @@
+[Unit]
+PartOf=graphical-session.target
+After=graphical-session.target
+Requisite=graphical-session.target
+
+[Service]
+ExecStart=/usr/bin/wbg "%h/Pictures/Backgrounds/Mandelbrot/mandelbrot_full_red.png"
+Restart=on-failure

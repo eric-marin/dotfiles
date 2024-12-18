@@ -9,6 +9,7 @@ opt.wrap = false
 
 -- Appearance
 opt.number = true
+opt.relativenumber = true
 opt.cursorline = true
 opt.termguicolors = true
 opt.showmode = true

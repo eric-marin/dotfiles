@@ -21,6 +21,14 @@ local config = function()
           }
         }
       },
+      -- ["core.dirman"] = {
+      --   config = {
+      --     workspaces = {
+      --       default = "~/neorg"
+      --     },
+      --     index = "index.norg"
+      --   }
+      -- },
       ["core.completion"] = {
         config = {
           engine = "nvim-cmp"

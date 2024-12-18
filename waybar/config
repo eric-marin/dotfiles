@@ -63,7 +63,7 @@
             "<span color='#ee99a0'>▇</span>",
             "<span color='#ed8796'>█</span>"
         ],
-        "on-click": "footclient -o pad=0x0 btop -p 1",
+        "on-click": "footclient -o pad=0x0 btop",
     },
     "temperature": {
 	"interval": 5,

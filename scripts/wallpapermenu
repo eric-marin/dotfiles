@@ -1,0 +1,11 @@
+#!/usr/bin/fish
+
+set dir "/home/eric.marin/Pictures/Backgrounds/"
+set chosen (
+  for file in (find $dir -type f)
+    if test -z $img; or test $file != $img
+      echo "$file"
+    end
+  end | cut -d '/' -f6 | fuzzel --dmenu)
+
+~/.config/scripts/set_background (echo $dir$chosen)

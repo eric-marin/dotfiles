@@ -9,6 +9,7 @@
     "custom/cat": {
         "format": "<span color='#181926' font-family='Symbols Nerd Font Mono'>󰄛</span>",
 	"tooltip": false,
+        "on-click": "~/.config/scripts/set_random ~/Pictures/Backgrounds/"
     },
     "hyprland/workspaces": {
 	"persistent-workspaces": {
@@ -28,13 +29,13 @@
         "format": "",
         "format-connected": "<span color='#8aadf4' font-family='Symbols Nerd Font Mono'></span>",
         "tooltip-format": "{device_alias}",
-        "on-click": "footclient bluetuith"
+        "on-click": "foot bluetuith"
     },
     "network": {
         "format-wifi": "<span color='#b7bdf8' font-family='Symbols Nerd Font Mono'>󰖩</span>",
         "format-disconnected": "<span color='#b7bdf4' font-family='Symbols Nerd Font Mono'>󰖪</span>",
         "tooltip-format": "{essid}",
-        "on-click": "footclient -o pad=0x0 nmtui"
+        "on-click": "foot -T nmtui -o pad=0x0 nmtui"
     },
     "pulseaudio": {
         "format": "<span color='#c6a0f6' font-family='Symbols Nerd Font Mono'>{icon}</span> {volume}%",
@@ -42,7 +43,7 @@
         "format-icons": {
             "default": ["󰕿", "󰖀", "󰕾"],
         },
-        "on-click": "footclient pulsemixer"
+        "on-click": "foot pulsemixer"
     },
     "backlight": {
         "device": "intel_backlight",
@@ -63,7 +64,7 @@
             "<span color='#ee99a0'>▇</span>",
             "<span color='#ed8796'>█</span>"
         ],
-        "on-click": "footclient -o pad=0x0 btop",
+        "on-click": "foot -T btop -o pad=0x0 btop",
     },
     "temperature": {
 	"interval": 5,

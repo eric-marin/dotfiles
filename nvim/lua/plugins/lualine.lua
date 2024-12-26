@@ -1,7 +1,7 @@
 local config = function()
   require("lualine").setup({
     options = {
-      theme = "catppuccin",
+      theme = "auto",
       globalstatus = true,
       disabled_filetypes = { "toggleterm", "lazy", "oil", "dashboard", "TelescopePrompt", "oil_preview" }
     },

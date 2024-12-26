@@ -1,0 +1,20 @@
+#!/usr/bin/fish
+set poweroff " Poweroff"
+set reboot " Reboot"
+set lock " Lock"
+set exit "󰗼 Exit"
+
+set chosen (echo -e "$poweroff\n$reboot\n$lock\n$exit" | fuzzel --dmenu --lines 4 --width 15)
+
+switch $chosen
+  case $poweroff
+    shutdown now
+  case $reboot
+    reboot
+  case $lock
+    loginctl lock-session
+  case $exit
+    niri msg action quit
+  case '*'
+    exit 1
+end

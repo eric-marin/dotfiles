@@ -16,8 +16,7 @@ local init = function()
 end
 
 local config = function()
-  local telescope = require("telescope")
-  telescope.setup({
+  require("telescope").setup({
     defaults = {
       mappings = {
         i = {

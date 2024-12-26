@@ -1,0 +1,14 @@
+#!/usr/bin/fish
+
+if test (count $argv) -lt 1; or not test -d $argv[1]
+  echo "Usage: $(status filename) <dir>"
+  exit 1
+end
+
+~/.config/scripts/set_background (
+  for file in (find $argv[1] -type f)
+    if test -z $img; or test $file != $img
+      echo (math (random) % 1000)":$file"
+    end
+  end | sort -n | head -n 1 | cut -d ':' -f2)
+

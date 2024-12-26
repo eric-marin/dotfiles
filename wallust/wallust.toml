@@ -1,0 +1,24 @@
+backend = "kmeans"
+check_contrast = true
+color_space = "lch"
+fallback_generator = "complementary"
+palette = "ansidark"
+
+[templates]
+foot.template = "foot"
+foot.target = "~/.config/foot/foot.ini"
+
+nvim.template = "nvim"
+nvim.target = "~/.cache/wallust/colors_neopywal.vim"
+
+fuzzel.template = "fuzzel"
+fuzzel.target = "~/.config/fuzzel/fuzzel.ini"
+
+niri.template = "niri"
+niri.target = "~/.config/niri/config.kdl"
+
+hyprlock.template = "hyprlock"
+hyprlock.target = "~/.config/hypr/hyprlock.conf"
+
+mako.template = "mako"
+mako.target = "~/.config/mako/config"

@@ -21,6 +21,8 @@ local config = function()
       "nix",
       "javascript",
       "norg",
+      "fish",
+      "kdl",
     },
     auto_install = false,
     highlight = {

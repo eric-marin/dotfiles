@@ -16,7 +16,7 @@ icon-theme=Papirus
 # delayed-filter-ms=300
 # delayed-filter-limit=20000
 # show-actions=no
-terminal=footclient -o pad=0x0
+terminal=foot -o pad=0x0
 # launch-prefix=<not set>
 # list-executables-in-path=no
 
@@ -44,21 +44,21 @@ image-size-ratio=0
 # match-workers=<number of logical CPUs>
 
 [colors]
-background=1e2030ff
-text=cad3f5ff
-prompt=ed8796ff
-placeholder=a5adcbff
-input=cad3f5ff
-match=ed8796ff
-selection=ed8796ff
-selection-text=24273aff
-selection-match=24273aff
-counter=a5adcbff
-border=363a4fff
+background=      {{background | strip}}FF
+text=            {{foreground | strip}}FF
+prompt=          {{color4 | strip}}FF
+placeholder=     {{color2 | strip}}FF
+input=           {{foreground | strip}}FF
+match=           {{color4 | strip}}FF
+selection=       {{color0 | strip}}FF
+selection-text=  {{color5 | strip}}FF
+selection-match= {{color5 | strip}}FF
+counter=         {{color1 | strip}}FF
+border=          {{color1 | strip}}FF
 
 [border]
 width=2
-radius=10
+radius=0
 
 [dmenu]
 # mode=text  # text|index

@@ -41,9 +41,9 @@ local config = function()
       }, {
         { name = "nvim_lsp" },
       }, {
-        { name = "buffer" },
-      }, {
         { name = "path" },
+      }, {
+        { name = "buffer" },
       }
     )
   })

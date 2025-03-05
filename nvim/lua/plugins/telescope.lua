@@ -15,33 +15,31 @@ local init = function()
   keymap.set("n", "<Space>tb", ":Telescope buffers<Enter>", opts)    -- Buffers
 end
 
-local config = function()
-  require("telescope").setup({
-    defaults = {
-      mappings = {
-        i = {
-          ["<C-j>"] = "move_selection_next",
-          ["<C-k>"] = "move_selection_previous",
-        },
+local opts = {
+  defaults = {
+    mappings = {
+      i = {
+        ["<C-j>"] = "move_selection_next",
+        ["<C-k>"] = "move_selection_previous",
       },
     },
-    picker = {
-      find_files = {
-        theme = "dropdown",
-        previewer = false,
-        hidden = true,
-      },
-      live_grep = {
-        theme = "dropdown",
-        previewer = false,
-      },
-      find_buffers = {
-        theme = "dropdown",
-        previewer = false,
-      },
+  },
+  picker = {
+    find_files = {
+      theme = "dropdown",
+      previewer = false,
+      hidden = true,
     },
-  })
-end
+    live_grep = {
+      theme = "dropdown",
+      previewer = false,
+    },
+    find_buffers = {
+      theme = "dropdown",
+      previewer = false,
+    },
+  },
+}
 
 return {
   "nvim-telescope/telescope.nvim",
@@ -49,5 +47,5 @@ return {
   lazy = true,
   cmd = "Telescope",
   init = init,
-  config = config
+  opts = opts,
 }

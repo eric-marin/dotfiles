@@ -13,4 +13,5 @@ niri msg action do-screen-transition
 swww img $img
 wallust run $img
 makoctl reload
+notify-send -i $img "Wallust" "Changed wallpaper and palette."
 

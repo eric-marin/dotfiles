@@ -82,10 +82,10 @@ local config = function()
     capabilities = capabilities,
   })
   -- nixd configuration
-  lspconfig.nixd.setup({
-    on_attach = on_attach,
-    capabilities = capabilities,
-  })
+  -- lspconfig.nixd.setup({
+  --   on_attach = on_attach,
+  --   capabilities = capabilities,
+  -- })
   -- typescript-language-server configuration
   lspconfig.ts_ls.setup({
     on_attach = on_attach,
@@ -97,11 +97,11 @@ local config = function()
     capabilities = capabilities,
   })
   -- vacuum configuration
-  lspconfig.vacuum.setup({
-    -- on_attach = on_attach,
-    capabilities = capabilities,
-    filetypes = { "yaml" }
-  })
+  -- lspconfig.vacuum.setup({
+  --   -- on_attach = on_attach,
+  --   capabilities = capabilities,
+  --   filetypes = { "yaml" }
+  -- })
 end
 
 return {

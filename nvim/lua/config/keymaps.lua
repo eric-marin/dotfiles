@@ -27,10 +27,13 @@ keymap.set("v", ">", ">gv")
 
 -- Comments
 vim.api.nvim_set_keymap("n", "<C-c>", "gcc", { noremap = false })
-vim.api.nvim_set_keymap("v", "<C-c>", "gcc<Esc>", { noremap = false })
+vim.api.nvim_set_keymap("v", "<C-c>", "gb", { noremap = false })
 
 -- Buffer kill
 -- keymap.set("n", "<C-q>", ":bunload<Enter>", opts)
 
 -- Working
 keymap.set("n", "<C-s>", ":w<Enter>", opts)
+
+-- Format All
+keymap.set("n", "fa", "ggVG=<C-o>", opts)

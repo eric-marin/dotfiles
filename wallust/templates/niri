@@ -59,7 +59,7 @@ output "HDMI-A-1" {
 
 layout {
   gaps 5
-  center-focused-column "never"
+  center-focused-column "on-overflow"
   // empty-workspace-above-first
 
   preset-column-widths {
@@ -86,11 +86,9 @@ layout {
     inactive-color "{{color0}}"
   }
 
-  struts {
-    left 5
-    right 5
-    top 0
-    bottom 5
+  tab-indicator {
+    place-within-column
+    gaps-between-tabs 5
   }
 }
 
@@ -111,16 +109,19 @@ window-rule {
   //geometry-corner-radius 10
   clip-to-geometry true
 }
+window-rule {
+  match app-id="SFML"
+}
 
 switch-events {}
 
 binds {
   Mod+Backslash { show-hotkey-overlay; }
 
-  Mod+Return { spawn "foot"; }
-  Mod+Space  { spawn "fuzzel"; }
-  Mod+Escape { spawn "~/.config/scripts/powermenu"; }
-  Mod+W      { spawn "~/.config/scripts/set_random" "/home/eric.marin/Pictures/Backgrounds/"; }
+  Mod+Return         hotkey-overlay-title="Spawn Terminal"    { spawn "foot"; }
+  Mod+Space          hotkey-overlay-title="Spawn Applauncher" { spawn "fuzzel"; }
+  Mod+Escape         hotkey-overlay-title="Spawn Powermenu"   { spawn "~/.config/scripts/powermenu"; }
+  Mod+W repeat=false hotkey-overlay-title="Random Wallpaper"  { spawn "~/.config/scripts/set_random" "/home/eric.marin/Pictures/Backgrounds/"; }
 
   XF86AudioRaiseVolume  allow-when-locked=true { spawn "pamixer" "-i" "5"; }
   XF86AudioLowerVolume  allow-when-locked=true { spawn "pamixer" "-d" "5"; }
@@ -203,6 +204,11 @@ binds {
   Print      { screenshot; }
   Ctrl+Print { screenshot-screen; }
   Alt+Print  { screenshot-window; }
+
+  Mod+V       { toggle-window-floating; }
+  Mod+Shift+V { switch-focus-between-floating-and-tiling; }
+
+  Mod+T { toggle-column-tabbed-display; }
 
   Mod+Shift+E { quit; }
 }

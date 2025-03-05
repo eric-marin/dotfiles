@@ -14,6 +14,7 @@ local config = function()
       "markdown_inline",
       "bash",
       "toml",
+      "latex",
 
       "cpp",
       "rust",

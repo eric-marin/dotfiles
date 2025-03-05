@@ -1,5 +1,3 @@
-math.randomseed(os.time())
-
 Headers = {
   {
     [[ ███╗   ██╗ ███████╗ ██████╗  ██╗   ██╗ ██╗ ███╗   ███╗ ]],
@@ -68,24 +66,6 @@ Headers = {
     [[                                                                     ]],
   },
   {
-    [[                                          _.oo. ]],
-    [[                  _.u[[/;:,.         .odMMMMMM' ]],
-    [[               .o888UU[[[/;:-.  .o@P^    MMM^   ]],
-    [[              oN88888UU[[[/;::-.        dP^     ]],
-    [[             dNMMNN888UU[[[/;:--.   .o@P^       ]],
-    [[            ,MMMMMMN888UU[[/;::-. o@^           ]],
-    [[            NNMMMNN888UU[[[/~.o@P^              ]],
-    [[            888888888UU[[[/o@^-..               ]],
-    [[           oI8888UU[[[/o@P^:--..                ]],
-    [[        .@^  YUU[[[/o@^;::---..                 ]],
-    [[      oMP     ^/o@P^;:::---..                   ]],
-    [[   .dMMM    .o@^ ^;::---...                     ]],
-    [[  dMMMMMMM@^`       `^^^^                       ]],
-    [[ YMMMUP^                                        ]],
-    [[  ^^                                            ]],
-    [[                                                ]],
-  },
-  {
     [[   ⣴⣶⣤⡤⠦⣤⣀⣤⠆     ⣈⣭⣿⣶⣿⣦⣼⣆          ]],
     [[    ⠉⠻⢿⣿⠿⣿⣿⣶⣦⠤⠄⡠⢾⣿⣿⡿⠋⠉⠉⠻⣿⣿⡛⣦       ]],
     [[          ⠈⢿⣿⣟⠦ ⣾⣿⣿⣷    ⠻⠿⢿⣿⣧⣄     ]],
@@ -119,23 +99,6 @@ Headers = {
     [[      |,4-  ) )-,_. ,\ (  `'-' ]],
     [[     '---''(_/--'  `-'\_)      ]],
     [[                               ]],
-  },
-  {
-    [[            ____            ]],
-    [[           /\   \           ]],
-    [[          /  \   \          ]],
-    [[         /    \   \         ]],
-    [[        /      \   \        ]],
-    [[       /   /\   \   \       ]],
-    [[      /   /  \   \   \      ]],
-    [[     /   /    \   \   \     ]],
-    [[    /   /    / \   \   \    ]],
-    [[   /   /    /   \   \   \   ]],
-    [[  /   /    /---------'   \  ]],
-    [[ /   /    /_______________\ ]],
-    [[ \  /                     / ]],
-    [[  \/_____________________/  ]],
-    [[                            ]],
   },
 }
 
@@ -197,6 +160,9 @@ Quotes = {
   }
 }
 
+
+math.randomseed(os.time())
+
 local header = function()
   return Headers[math.random(#Headers)]
 end
@@ -211,33 +177,32 @@ local init = function()
     { noremap = true, silent = true, desc = "Dashboard" }) -- Dashboard
 end
 
-local hyper = function()
-  require("dashboard").setup {
-    theme = "hyper",
-    shortcut_type = "number",
-    change_to_vcs_root = true,
-    hide = {
-      statusline = false
+local hyper = {
+  theme = "hyper",
+  shortcut_type = "number",
+  change_to_vcs_root = true,
+  hide = {
+    statusline = false
+  },
+  config = {
+    header = header(),
+    shortcut = {
+      { action = "ene | lua require('lualine')", desc = "New File", icon = " ", key = "n" },
+      { action = "Lazy", desc = "Plugin Manager", icon = "󰒲 ", key = "p" },
+      { action = "Oil --float", desc = "File browser", icon = " ", key = "b" },
+      { action = "Neorg index", desc = "Neorg Index", icon = "󰧮 ", key = "i" }
     },
-    config = {
-      header = header(),
-      shortcut = {
-        { action = "ene | lua require('lualine')", desc = "New", icon = " ", key = "n" },
-        { action = "Lazy", desc = "Lazy", icon = "󰒲 ", key = "l" },
-        { action = "Oil --float", desc = "File browser", icon = " ", key = "o" },
-      },
-      packages = { enable = true },
-      project = { enable = true },
-      mru = { limit = 5 },
-      footer = footer,
-    },
-  }
-end
+    packages = { enable = true },
+    project = { enable = true },
+    mru = { limit = 5 },
+    footer = footer,
+  },
+}
 
 return {
   "eric-marin/dashboard-nvim",
   dependencies = { "nvim-tree/nvim-web-devicons" },
   lazy = false,
   init = init,
-  config = hyper,
+  opts = hyper
 }

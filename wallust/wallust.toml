@@ -1,15 +1,15 @@
-backend = "kmeans"
+backend = "fastresize"
 check_contrast = true
 color_space = "lch"
 fallback_generator = "complementary"
-palette = "ansidark"
+palette = "ansidark16"
 
 [templates]
 foot.template = "foot"
 foot.target = "~/.config/foot/foot.ini"
 
 nvim.template = "nvim"
-nvim.target = "~/.cache/wallust/colors_neopywal.vim"
+nvim.target = "~/.cache/wal/colors-wal.vim"
 
 fuzzel.template = "fuzzel"
 fuzzel.target = "~/.config/fuzzel/fuzzel.ini"

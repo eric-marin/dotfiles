@@ -7,6 +7,7 @@ return {
     exclude = {
       filetypes = {
         "dashboard",
+        "norg"
       },
     },
   },

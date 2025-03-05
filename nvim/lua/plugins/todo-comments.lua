@@ -1,32 +1,30 @@
-local config = function()
-  require("todo-comments").setup({
-    keywords = {
-      FIX  = { icon = "", color = "error", alt = { "FIXME", "BUG", "FIXIT", "ISSUE" } },
-      TODO = { icon = "", color = "info" },
-      HACK = { icon = "", color = "hack" },
-      WARN = { icon = "", color = "warning", alt = { "WARNING", "XXX" } },
-      PERF = { icon = "󰅒", color = "perf", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
-      NOTE = { icon = "", color = "hint", alt = { "INFO" } },
-      TEST = { icon = "", color = "test", alt = { "TESTING", "PASSED", "FAILED" } },
-    },
-    colors = {
-      error = { "DiagnosticError", "ErrorMsg", "#DC2626" },
-      warning = { "DiagnosticWarn", "WarningMsg", "#FBBF24" },
-      info = { "DiagnosticInfo", "#2563EB" },
-      hint = { "DiagnosticHint", "#10B981" },
-      test = { "Identifier", "#FF00FF" },
-      hack = "#F5A97F",
-      perf = "#C6A0F6"
-    }
-  })
-end
+local opts = {
+  keywords = {
+    FIX  = { icon = "", color = "error", alt = { "FIXME", "BUG", "FIXIT", "ISSUE" } },
+    TODO = { icon = "", color = "info" },
+    HACK = { icon = "", color = "hack" },
+    WARN = { icon = "", color = "warning", alt = { "WARNING", "XXX" } },
+    PERF = { icon = "󰅒", color = "perf", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
+    NOTE = { icon = "", color = "hint", alt = { "INFO" } },
+    TEST = { icon = "", color = "test", alt = { "TESTING", "PASSED", "FAILED" } },
+  },
+  colors = {
+    error = "@text.title.1.markdown",
+    info = "DiagnosticInfo",
+    hack = "@text.title.2.markdown",
+    warning = "@text.title.3.markdown",
+    perf = "@text.title.4.markdown",
+    hint = "@text.title.5.markdown",
+    test = "@text.title.6.markdown",
+  }
+}
 
 return {
   "folke/todo-comments.nvim",
   dependencies = { "nvim-lua/plenary.nvim" },
   lazy = true,
   event = { "BufReadPost", "BufWritePost", "BufNewFile" },
-  config = config
+  opts = opts
 }
 
 -- FIX: ciao

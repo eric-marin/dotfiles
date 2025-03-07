@@ -3,8 +3,8 @@
 }
 
 window#waybar {
-  background: #212118;
-  color: #F1EFDA;
+  background: {{background}};
+  color: {{foreground}};
 }
 
 .modules-left, .modules-center, .modules-right {
@@ -16,7 +16,7 @@ window#waybar {
 #tray {
   padding-left: 3px;
   padding-right: 3px;
-  border-color: #64645B;
+  border-color: {{color8}};
   border-style: solid;
   border-width: 1px;
 }
@@ -28,63 +28,63 @@ window#waybar {
 }
 
 #clock {
-  background: #A95758;
+  background: {{color6}};
 }
 #network {
-  background: #928982;
+  background: {{color5}};
 }
 #bluetooth {
-  background: #CE5B5D;
+  background: {{color3}};
 }
 #backlight {
-  background: #8B8A92;
+  background: {{color4}};
 }
 #pulseaudio {
-  background: #8D7C66;
+  background: {{color2}};
 }
 #battery {
-  background: #A95758;
+  background: {{color6}};
 }
 #disk {
-  background: #928982;
+  background: {{color5}};
 }
 #temperature {
-  background: #CE5B5D;
+  background: {{color3}};
 }
 #memory {
-  background: #8B8A92;
+  background: {{color4}};
 }
 #cpu {
-  background: #8D7C66;
+  background: {{color2}};
 }
 #tray {
-  background: #45453A;
+  background: {{color0}};
 }
 
 tooltip {
-  background: #45453A;
+  background: {{color0}};
 }
 tooltip label {
-  color: #F1EFDA;
+  color: {{foreground}};
 }
 
 #tray menu {
-  background: #45453A;
-  color: #F1EFDA;
+  background: {{color0}};
+  color: {{foreground}};
 }
 
 #bluetooth.off, #pulseaudio.muted, #network.disconnected, #battery.warning {
-  background: #45453A;
+  background: {{color0}};
 }
 #bluetooth.off {
-  color: #CE5B5D;
+  color: {{color3}};
 }
 #pulseaudio.muted {
-  color: #8D7C66;
+  color: {{color2}};
 }
 #network.disconnected {
-  color: #928982;
+  color: {{color5}};
 }
 #battery.warning {
-  color: #A95758;
+  color: {{color6}};
 }

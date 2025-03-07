@@ -1,45 +1,32 @@
 {
     "layer": "top",
-    "margin": 2,
-    "spacing": 2,
+    "spacing": 0,
+    "margin": 0,
     "fixed-center": false,
-    "modules-left": ["custom/cat", "hyprland/workspaces", "tray"],
-    "modules-center": [],
-    "modules-right": ["backlight", "pulseaudio", "network", "bluetooth", "cpu", "memory", "temperature", "disk", "battery", "clock"],
-    "custom/cat": {
-        "format": "<span color='#181926' font-family='Symbols Nerd Font Mono'>󰄛</span>",
-	"tooltip": false,
-        "on-click": "~/.config/scripts/set_random ~/Pictures/Backgrounds/"
-    },
-    "hyprland/workspaces": {
-	"persistent-workspaces": {
-             "*": 5
-	},
-	"format": "<span font-family='Symbols Nerd Font Mono'>{icon}</span>",
-	"format-icons": {
-	    "empty": "󰯈",
-	    "default": "󰚌",
-	}
-    },
+    "modules-left": ["clock", "network", "bluetooth", "backlight", "pulseaudio"],
+    "modules-center": ["tray"],
+    "modules-right": ["cpu", "memory", "temperature", "disk", "battery"],
     "tray": {
         "icon-size": 20,
         "spacing": 5,
     },
     "bluetooth": {
-        "format": "",
-        "format-connected": "<span color='#8aadf4' font-family='Symbols Nerd Font Mono'></span>",
-        "tooltip-format": "{device_alias}",
+        "format-on": "<span font-family='Symbols Nerd Font Mono'>󰂯</span>",
+        "format-off": "<span font-family='Symbols Nerd Font Mono'>󰂲</span>",
+        "format-connected": "<span font-family='Symbols Nerd Font Mono'>󰂱</span>",
+        "tooltip-format-connecte": "{device_alias}",
+        "tooltip-format-connected-battery": "{device_alias} ({device_battery_percentage}%)",
         "on-click": "foot bluetuith"
     },
     "network": {
-        "format-wifi": "<span color='#b7bdf8' font-family='Symbols Nerd Font Mono'>󰖩</span>",
-        "format-disconnected": "<span color='#b7bdf4' font-family='Symbols Nerd Font Mono'>󰖪</span>",
+        "format-wifi": "<span font-family='Symbols Nerd Font Mono'>󰖩</span>",
+        "format-disconnected": "<span font-family='Symbols Nerd Font Mono'>󰖪</span>",
         "tooltip-format": "{essid}",
         "on-click": "foot -T nmtui -o pad=0x0 nmtui"
     },
     "pulseaudio": {
-        "format": "<span color='#c6a0f6' font-family='Symbols Nerd Font Mono'>{icon}</span> {volume}%",
-        "format-muted": "<span color='#c6a0f6' font-family='Symbols Nerd Font Mono'>󰝟</span> <span color='#8087a2'>{volume}%</span>",
+        "format": "<span font-family='Symbols Nerd Font Mono'>{icon}</span> {volume}%",
+        "format-muted": "<span font-family='Symbols Nerd Font Mono'>󰝟</span> {volume}%",
         "format-icons": {
             "default": ["󰕿", "󰖀", "󰕾"],
         },
@@ -47,22 +34,22 @@
     },
     "backlight": {
         "device": "intel_backlight",
-        "format": "<span color='#ffffff' font-family='Symbols Nerd Font Mono'>{icon}</span> {percent}%",
+        "format": "<span font-family='Symbols Nerd Font Mono'>{icon}</span> {percent}%",
         "format-icons": ["", "", "", "", "", "", "", "", ""],
         "tooltip": false
     },
     "cpu": {
         "interval": 1,
-        "format": "<span color='#7dc4e4' font-family='Symbols Nerd Font Mono'> </span> {icon0}{icon1}{icon2}{icon3}{icon4}{icon5}{icon6}{icon7}{icon8}{icon9}{icon10}{icon11}{icon12}{icon13}{icon14}{icon15}",
+        "format": "<span font-family='Symbols Nerd Font Mono'> </span>{icon0}{icon1}{icon2}{icon3}{icon4}{icon5}{icon6}{icon7}{icon8}{icon9}{icon10}{icon11}{icon12}{icon13}{icon14}{icon15}",
         "format-icons": [
-            "<span color='#c6a0f6'>▁</span>",
-            "<span color='#8aadf4'>▂</span>",
-            "<span color='#8bd5ca'>▃</span>",
-            "<span color='#a6da95'>▄</span>",
-            "<span color='#eed49f'>▅</span>",
-            "<span color='#f5a97f'>▆</span>",
-            "<span color='#ee99a0'>▇</span>",
-            "<span color='#ed8796'>█</span>"
+            "<span>▁</span>",
+            "<span>▂</span>",
+            "<span>▃</span>",
+            "<span>▄</span>",
+            "<span>▅</span>",
+            "<span>▆</span>",
+            "<span>▇</span>",
+            "<span>█</span>"
         ],
         "on-click": "foot -T btop -o pad=0x0 btop",
     },
@@ -70,35 +57,32 @@
 	"interval": 5,
         "hwmon-path-abs": "/sys/devices/platform/coretemp.0/hwmon",
         "input-filename": "temp1_input",
-        "format": "<span color='#a6da95' font-family='Symbols Nerd Font Mono'>{icon}</span> {temperatureC}°",
-        "format-critical": "<span color='#181926' font-family='Symbols Nerd Font Mono'>{icon}</span> {temperatureC}°",
+        "format": "<span font-family='Symbols Nerd Font Mono'>{icon}</span> {temperatureC}°",
+        "format-critical": "<span font-family='Symbols Nerd Font Mono'>{icon}</span> {temperatureC}°",
         "critical-threshold": 70,
         "format-icons": ["", "", "", "", ""],
         "tooltip": false
     },
     "memory": {
         "interval": 5,
-        "format": "<span color='#8bd5ca' font-family='Symbols Nerd Font Mono'>󰘚</span> {used:0.1f}GiB",
+        "format": "<span font-family='Symbols Nerd Font Mono'>󰘚</span> {used:0.1f}GiB",
         "tooltip-format": "{used:0.1f}GiB / {total:0.1f}GiB"
     },
     "disk": {
-        "format": "<span color='#eed49f' font-family='Symbols Nerd Font Mono'>󰋊</span> {percentage_used}%",
+        "format": "<span font-family='Symbols Nerd Font Mono'>󰋊</span> {percentage_used}%",
         "tooltip-format": "{used} / {total}"
     },
     "battery": {
 	"interval": 5,
         "states": {
             "warning": 25,
-            "critical": 10
         },
-        "format": "<span color='#f5a97f' font-family='Symbols Nerd Font Mono'>{icon}</span> {capacity}%",
-        "format-warning": "<span font-family='Symbols Nerd Font Mono'>{icon}</span> {capacity}%",
-        "format-critical": "<span font-family='Symbols Nerd Font Mono'>{icon}</span> {capacity}%",
-	"format-charging": "<span font-family='Symbols Nerd Font Mono'>{icon}</span> {capacity}%",
-        "format-icons": ["", "", "", "", ""],
+        "format": "<span font-family='Symbols Nerd Font Mono'>{icon}</span> {capacity}%",
+	"format-charging": "<span font-family='Symbols Nerd Font Mono'>󰂄</span> {capacity}%",
+        "format-icons": ["󰂎","󰁺","󰁻","󰁼","󰁽","󰁾","󰁿","󰂀","󰂁","󰂂","󰁹"],
     },
     "clock": {
-        "format": "<span color='#ed8796' font-family='Symbols Nerd Font Mono'>󰥔</span> {:%H:%M}",
+        "format": "<span font-family='Symbols Nerd Font Mono'>󰥔</span> {:%H:%M}",
         "tooltip-format": "{:%A, %B %d, %Y (%R)}"
     }
 }

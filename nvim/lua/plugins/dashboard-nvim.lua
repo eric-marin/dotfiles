@@ -157,6 +157,49 @@ Quotes = {
     "",
     "An idiot admires complexity, a genius admires simplicity.",
     "~ Terry Davis",
+  },
+  {
+    "",
+    "It's hardware that makes a machine fast. It's software that makes a fast machine slow.",
+    "~ Craig Reucassel",
+  },
+  {
+    "",
+    "Computer science is no more about computers than astronomy is about telescopes.",
+    "~ Edsger Dijkstra",
+  },
+  {
+    "",
+    "An algorithm must be seen to be believed.",
+    "~ Donald Knuth",
+  },
+  {
+    "",
+    "In theory there is no difference between theory and practice.",
+    "In practice there is.",
+    "~ Yogi Berra",
+  },
+  {
+    "",
+    "If Java had true garbage collection, most programs would delete themselves upon execution.",
+    "~ Robert Sewell",
+  },
+  {
+    "",
+    "If debugging is the process of removing software bugs,",
+    "then programming must be the process of putting them in.",
+    "~ Edsger Dijkstra",
+  },
+  {
+    "",
+    "Most of you are familiar with the virtues of a programmer.",
+    "There are three, of course: laziness, impatience, and hubris.",
+    "~ Larry Wall",
+  },
+  {
+    "",
+    "The question of whether computers can think is like the question of whether submarines can swim.",
+    "~ Edsger Dijkstra",
   }
 }
 

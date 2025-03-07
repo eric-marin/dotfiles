@@ -5,7 +5,7 @@ if test (count $argv) -lt 1; or not test -f $argv[1]
   exit 1
 end
 
-set -x SWWW_TRANSITION "wipe"
+set -x SWWW_TRANSITION "simple"
 set -x SWWW_TRANSITION_FPS 60
 set -U img $argv[1]
 
@@ -13,5 +13,6 @@ niri msg action do-screen-transition
 swww img $img
 wallust run $img
 makoctl reload
+systemctl --user reload waybar.service
 notify-send -i $img "Wallust" "Changed wallpaper and palette."
 

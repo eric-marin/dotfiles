@@ -89,6 +89,8 @@ layout {
   tab-indicator {
     place-within-column
     gaps-between-tabs 5
+    active-color "{{color1}}"
+    inactive-color "{{color0}}"
   }
 }
 

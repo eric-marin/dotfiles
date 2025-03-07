@@ -22,3 +22,6 @@ hyprlock.target = "~/.config/hypr/hyprlock.conf"
 
 mako.template = "mako"
 mako.target = "~/.config/mako/config"
+
+waybar.template = "waybar"
+waybar.target = "~/.config/waybar/style.css"

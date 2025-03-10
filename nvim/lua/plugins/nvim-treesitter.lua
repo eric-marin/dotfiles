@@ -11,6 +11,7 @@ local config = function()
       "regex",
       "diff",
       "cmake",
+      "meson",
       "markdown_inline",
       "bash",
       "toml",

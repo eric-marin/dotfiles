@@ -7,3 +7,5 @@ These are current my dotfiles:
 - Terminal: foot
 - Statusbar: waybar
 - Editor: neovim
+
+The colorscheme is generated and applied using wallust

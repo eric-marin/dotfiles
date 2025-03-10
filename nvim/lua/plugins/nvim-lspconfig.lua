@@ -66,11 +66,6 @@ local config = function()
     on_attach = on_attach,
     capabilities = capabilities,
   })
-  -- cmake-language-server configuration
-  lspconfig.cmake.setup({
-    on_attach = on_attach,
-    capabilities = capabilities,
-  })
   -- haskell-language-server configuration
   lspconfig.hls.setup({
     on_attach = on_attach,
@@ -81,12 +76,6 @@ local config = function()
     on_attach = on_attach,
     capabilities = capabilities,
   })
-  -- nixd configuration
-  -- lspconfig.nixd.setup({
-  --   on_attach = on_attach,
-  --   capabilities = capabilities,
-  -- })
-  -- typescript-language-server configuration
   lspconfig.ts_ls.setup({
     on_attach = on_attach,
     capabilities = capabilities,
@@ -96,12 +85,11 @@ local config = function()
     on_attach = on_attach,
     capabilities = capabilities,
   })
-  -- vacuum configuration
-  -- lspconfig.vacuum.setup({
-  --   -- on_attach = on_attach,
-  --   capabilities = capabilities,
-  --   filetypes = { "yaml" }
-  -- })
+  -- mesonlsp configuration
+  lspconfig.mesonlsp.setup({
+    on_attach = on_attach,
+    capabilities = capabilities,
+  })
 end
 
 return {

@@ -8,3 +8,5 @@ These are current my dotfiles:
 - Statusbar: [waybar](https://github.com/Alexays/Waybar)
 - Editor: [neovim](https://github.com/neovim/neovim)
 - Colorscheme: [wallust](https://codeberg.org/explosion-mental/wallust)
+
+The missing configuration files are in ```wallust/templates/```

@@ -2,6 +2,7 @@
     "layer": "top",
     "spacing": 0,
     "margin": 0,
+    "reload_style_on_change": true,
     "fixed-center": false,
     "modules-left": ["clock", "network", "bluetooth", "backlight", "pulseaudio"],
     "modules-center": ["tray"],

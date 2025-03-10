@@ -4,7 +4,7 @@ set reboot " Reboot"
 set lock " Lock"
 set exit "󰗼 Exit"
 
-set chosen (echo -e "$poweroff\n$reboot\n$lock\n$exit" | fuzzel --dmenu --lines 4 --width 15)
+set chosen (echo -e "$poweroff\n$reboot\n$lock\n$exit" | fuzzel --dmenu --lines 4 --width 15 --prompt "" --placeholder "")
 
 switch $chosen
   case $poweroff

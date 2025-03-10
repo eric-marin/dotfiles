@@ -12,8 +12,7 @@ window#waybar {
 }
 
 #clock,#network,#bluetooth,#backlight,#pulseaudio,
-#battery,#disk,#temperature,#memory,#cpu,
-#tray {
+#battery,#disk,#temperature,#memory,#cpu {
   padding-left: 3px;
   padding-right: 3px;
   border-color: #64645B;
@@ -56,9 +55,6 @@ window#waybar {
 }
 #cpu {
   background: #8D7C66;
-}
-#tray {
-  background: #45453A;
 }
 
 tooltip {

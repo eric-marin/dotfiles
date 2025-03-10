@@ -2,7 +2,7 @@ local opts = {
   options = {
     theme = "auto",
     globalstatus = true,
-    disabled_filetypes = { "toggleterm", "lazy", "oil", "dashboard", "TelescopePrompt", "oil_preview" }
+    disabled_filetypes = { "toggleterm", "lazy", "oil", "dashboard", "TelescopePrompt", "oil_preview", "ministarter" }
   },
   sections = {
     lualine_a = { "mode" },

@@ -4,7 +4,7 @@
     "margin": 0,
     "reload_style_on_change": true,
     "fixed-center": false,
-    "modules-left": ["clock", "network", "bluetooth", "backlight", "pulseaudio"],
+    "modules-left": ["clock", "network", "bluetooth", "backlight", "pulseaudio", "idle_inhibitor"],
     "modules-center": ["tray"],
     "modules-right": ["cpu", "memory", "temperature", "disk", "battery"],
     "tray": {
@@ -33,6 +33,15 @@
         },
         "on-click": "foot pulsemixer"
     },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "<span font-family='Symbols Nerd Font Mono'></span>",
+            "deactivated": "<span font-family='Symbols Nerd Font Mono'></span>"
+        },
+        "tooltip-format-activated": "Inhibiting",
+        "tooltip-format-deactivated": ""
+    },
     "backlight": {
         "device": "intel_backlight",
         "format": "<span font-family='Symbols Nerd Font Mono'>{icon}</span> {percent}%",
@@ -59,8 +68,6 @@
         "hwmon-path-abs": "/sys/devices/platform/coretemp.0/hwmon",
         "input-filename": "temp1_input",
         "format": "<span font-family='Symbols Nerd Font Mono'>{icon}</span> {temperatureC}°",
-        "format-critical": "<span font-family='Symbols Nerd Font Mono'>{icon}</span> {temperatureC}°",
-        "critical-threshold": 70,
         "format-icons": ["", "", "", "", ""],
         "tooltip": false
     },
@@ -79,12 +86,12 @@
             "warning": 25,
         },
         "format": "<span font-family='Symbols Nerd Font Mono'>{icon}</span> {capacity}%",
-	"format-charging": "<span font-family='Symbols Nerd Font Mono'>󰂄</span> {capacity}%",
+	"format-charging": "<span font-family='Symbols Nerd Font Mono'>󰂄</span>{capacity}%",
         "format-icons": ["󰂎","󰁺","󰁻","󰁼","󰁽","󰁾","󰁿","󰂀","󰂁","󰂂","󰁹"],
     },
     "clock": {
         "format": "<span font-family='Symbols Nerd Font Mono'>󰥔</span> {:%H:%M}",
-        "tooltip-format": "{:%A, %B %d, %Y (%R)}"
+        "tooltip-format": "{:%A, %d %B %Y}"
     }
 }
 

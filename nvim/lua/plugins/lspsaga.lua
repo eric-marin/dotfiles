@@ -1,4 +1,7 @@
 local config = function()
+  vim.diagnostic.config({
+    severity_sort = true,
+  })
   require("lspsaga").setup({
     ui = {
       code_action = "",

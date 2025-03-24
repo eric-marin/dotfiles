@@ -1,0 +1,48 @@
+@theme	"/dev/null"
+
+configuration {
+	drun-display-format: "{name}";
+	show-icons: true;
+	icon-theme: "Papirus";
+	terminal: "foot -o pad=0x0";
+	matching: "fuzzy";
+}
+
+* {
+	background-color: {{background}};
+	color: {{foreground}};
+}
+
+window {
+	location: north west;
+	anchor: center;
+	width: 589;
+	y-offset: -22;
+	x-offset: 260;
+	padding: 3 0 3 5;
+}
+
+mainbox {
+	orientation: horizontal;
+}
+
+inputbar {
+	children: [ prompt, entry ];
+	spacing: 5;
+}
+prompt {
+	font: "Hack Nerd Font Mono 10";
+}
+entry {
+	font: "Hack Nerd Font 10";
+	placeholder: "...";
+	width: 50;
+}
+
+listview {
+	spacing: 10;
+	layout: horizontal;
+}
+element-text {
+	font: "Hack Nerd Font 10";
+}

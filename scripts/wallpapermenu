@@ -4,8 +4,8 @@ set dir "/home/eric.marin/Pictures/Backgrounds/"
 set chosen (
   for file in (find $dir -type f)
     if test -z $img; or test $file != $img
-      echo "$file"
+      echo -en "$file\0icon\x1fthumbnail://$file\n"
     end
-  end | cut -d '/' -f6 | fuzzel --dmenu)
+  end | rofi -dmenu -show-icons -theme ~/.config/rofi/wallpapermenu.rasi)
 
-~/.config/scripts/set_background (echo $dir$chosen)
+~/.config/scripts/set_background (echo $chosen)

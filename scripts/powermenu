@@ -1,20 +1,26 @@
 #!/usr/bin/fish
-set poweroff " Poweroff"
-set reboot " Reboot"
-set lock " Lock"
-set exit "󰗼 Exit"
+set poweroff ""
+set reboot ""
+set lock ""
+set exit "󰗼"
+set sleep "󰒲"
+set hibernate ""
 
-set chosen (echo -e "$poweroff\n$reboot\n$lock\n$exit" | fuzzel --dmenu --lines 4 --width 15 --prompt "" --placeholder "")
+set chosen (echo -e "$poweroff\n$reboot\n$lock\n$exit\n$sleep\n$hibernate" | rofi -dmenu -theme ~/.config/rofi/powermenu.rasi)
 
 switch $chosen
-  case $poweroff
-    shutdown now
-  case $reboot
-    reboot
-  case $lock
-    loginctl lock-session
-  case $exit
-    niri msg action quit
-  case '*'
-    exit 1
+case $poweroff
+  shutdown now
+case $reboot
+  reboot
+case $lock
+  loginctl lock-session
+case $exit
+  niri msg action quit
+case $sleep
+  systemctl suspend
+case $hibernate
+  systemctl hibernate
+case '*'
+  exit 1
 end

@@ -11,7 +11,7 @@ window#waybar {
   padding: 1px;
 }
 
-#clock,#network,#bluetooth,#backlight,#pulseaudio,
+#clock,#network,#bluetooth,#backlight,#pulseaudio, #idle_inhibitor,
 #battery,#disk,#temperature,#memory,#cpu {
   padding-left: 3px;
   padding-right: 3px;
@@ -19,14 +19,14 @@ window#waybar {
   border-style: solid;
   border-width: 1px;
 }
-#network,#bluetooth,#backlight,#pulseaudio {
+#network,#bluetooth,#backlight,#pulseaudio, #idle_inhibitor {
   border-left-width: 0px;
 }
 #disk,#temperature,#memory,#cpu {
   border-right-width: 0px;
 }
 
-#clock {
+#clock, #idle_inhibitor {
   background: {{color6}};
 }
 #network {
@@ -69,7 +69,7 @@ tooltip label {
   color: {{foreground}};
 }
 
-#bluetooth.off, #pulseaudio.muted, #network.disconnected, #battery.warning {
+#bluetooth.off, #pulseaudio.muted, #network.disconnected, #battery.warning, #idle_inhibitor.deactivated {
   background: {{color0}};
 }
 #bluetooth.off {
@@ -83,4 +83,11 @@ tooltip label {
 }
 #battery.warning {
   color: {{color6}};
+}
+#battery.charging {
+  background: {{color6}};
+  color: {{foreground}};
+}
+#idle_inhibitor.deactivated {
+  color: {{color6}}
 }

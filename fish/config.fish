@@ -1,7 +1,11 @@
 #!/bin/fish
 
 function fish_prompt
-    printf '%s%s%s $ ' \ (set_color $fish_color_cwd) (prompt_pwd --full-length-dirs 5) (set_color normal)
+  printf (if fish_is_root_user
+    echo '%s%s%s # '
+  else
+    echo '%s%s%s $ '
+  end) \ (set_color $fish_color_cwd) (prompt_pwd --full-length-dirs 5) (set_color normal)
 end
 
 function start_niri
@@ -19,9 +23,13 @@ end
 fish_add_path -p ~/.cargo/bin ~/.ghcup/bin
 set -U fish_greeting
 set EDITOR "neovim"
+export DISPLAY=:0
 
 if status is-login
   start_niri
   kill $fish_pid
 end
 
+
+# Created by `pipx` on 2025-05-03 19:57:49
+set PATH $PATH /home/eric.marin/.local/bin

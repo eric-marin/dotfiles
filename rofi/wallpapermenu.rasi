@@ -1,0 +1,41 @@
+@theme	"/dev/null"
+
+* {
+	background-color: #130A0C;
+}
+
+window {
+	children: [ horibox ];
+	border: 1;
+	border-color: #72595E;
+	padding: 5;
+	width: 797;
+}
+
+horibox {
+	orientation: horizontal;
+	children: [ listview ];
+}
+
+listview {
+	layout: horizontal;
+	spacing: 5;
+	children: [element-icon];
+}
+
+element {
+	border-color: #33272A;
+	border: 1;
+	children: [element-icon];
+}
+
+element-icon {
+	expand: true;
+	size: 33%;
+	squared: false;
+}
+
+element selected{
+	text-color: inherit;
+	border-color: #95736A;
+}

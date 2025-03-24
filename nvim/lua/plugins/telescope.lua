@@ -10,36 +10,27 @@ local init = function()
   opts.desc = "All commands (Telescope)"
   keymap.set("n", "<Space>ta", ":Telescope<Enter>", opts)            -- All commands
   opts.desc = "Find words (Telescope)"
-  keymap.set("n", "<Space>tg", ":Telescope live_grep<Enter>", opts)  -- Find words
+  keymap.set("n", "<Space>tw", ":Telescope live_grep<Enter>", opts)  -- Find words
   opts.desc = "Buffers (Telescope)"
   keymap.set("n", "<Space>tb", ":Telescope buffers<Enter>", opts)    -- Buffers
 end
 
-local opts = {
-  defaults = {
-    mappings = {
-      i = {
-        ["<C-j>"] = "move_selection_next",
-        ["<C-k>"] = "move_selection_previous",
+local config = function()
+  require("telescope").setup({
+    defaults = require("telescope.themes").get_ivy(),
+    pickers = {
+      find_files = {
+        hidden = true,
       },
+      builtin = {
+        previewer = false,
+      },
+      help_tags = {
+        previewer = false,
+      }
     },
-  },
-  picker = {
-    find_files = {
-      theme = "dropdown",
-      previewer = false,
-      hidden = true,
-    },
-    live_grep = {
-      theme = "dropdown",
-      previewer = false,
-    },
-    find_buffers = {
-      theme = "dropdown",
-      previewer = false,
-    },
-  },
-}
+  })
+end
 
 return {
   "nvim-telescope/telescope.nvim",
@@ -47,5 +38,5 @@ return {
   lazy = true,
   cmd = "Telescope",
   init = init,
-  opts = opts,
+  config = config,
 }

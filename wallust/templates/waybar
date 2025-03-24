@@ -84,3 +84,7 @@ tooltip label {
 #battery.warning {
   color: {{color6}};
 }
+#battery.charging {
+  background: {{color6}};
+  color: {{foreground}};
+}

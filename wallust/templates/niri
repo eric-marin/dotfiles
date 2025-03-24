@@ -116,17 +116,17 @@ window-rule {
 }
 
 switch-events {
-  lid-close { spawn "niri" "msg" "action" "power-off-monitors"; }
   lid-open { spawn "niri" "msg" "action" "power-on-monitors"; }
 }
 
 binds {
   Mod+Backslash { show-hotkey-overlay; }
 
-  Mod+Return         hotkey-overlay-title="Spawn Terminal"    { spawn "foot"; }
-  Mod+Space          hotkey-overlay-title="Spawn Applauncher" { spawn "fuzzel"; }
-  Mod+Escape         hotkey-overlay-title="Spawn Powermenu"   { spawn "~/.config/scripts/powermenu"; }
-  Mod+W repeat=false hotkey-overlay-title="Random Wallpaper"  { spawn "~/.config/scripts/set_random" "/home/eric.marin/Pictures/Backgrounds/"; }
+  Mod+Return         hotkey-overlay-title="Spawn Terminal"      { spawn "foot"; }
+  Mod+Space          hotkey-overlay-title="Spawn Applauncher"   { spawn "fuzzel"; }
+  Mod+Escape         hotkey-overlay-title="Spawn Powermenu"     { spawn "~/.config/scripts/powermenu"; }
+  Mod+W              hotkey-overlay-title="Spawn Wallpapermenu" { spawn "~/.config/scripts/wallpapermenu"; }
+  // Mod+W repeat=false hotkey-overlay-title="Random Wallpaper"  { spawn "~/.config/scripts/set_random" "/home/eric.marin/Pictures/Backgrounds/"; }
 
   XF86AudioRaiseVolume  allow-when-locked=true { spawn "pamixer" "-i" "5"; }
   XF86AudioLowerVolume  allow-when-locked=true { spawn "pamixer" "-d" "5"; }

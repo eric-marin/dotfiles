@@ -1,19 +1,22 @@
+prefer-no-csd
+screenshot-path "~/Pictures/Screenshots/%Y%m%d-%H%M%S.png"
+
 environment {
   QT_QPA_PLATFORM "wayland"
   DISPLAY ":0"
 }
+
 hotkey-overlay {
   skip-at-startup
 }
+
 cursor {
   // xcursor-theme "breeze_cursors"
   // xcursor-size 48
 
   // hide-when-typing
-  hide-after-inactive-ms 5000
+  // hide-after-inactive-ms 5000
 }
-prefer-no-csd
-screenshot-path null
 
 input {
   keyboard {
@@ -200,18 +203,18 @@ binds {
   Mod+Shift+F { fullscreen-window; }
   Mod+C       { center-column; }
 
-  Mod+Minus { set-column-width "-10%"; }
-  Mod+Plus  { set-column-width "+10%"; }
+  Mod+Minus { set-column-width "-1%"; }
+  Mod+Plus  { set-column-width "+1%"; }
 
-  Mod+Shift+Minus { set-window-height "-10%"; }
-  Mod+Shift+Plus  { set-window-height "+10%"; }
+  Mod+Shift+Minus { set-window-height "-1%"; }
+  Mod+Shift+Plus  { set-window-height "+1%"; }
 
   Print      { screenshot; }
   Ctrl+Print { screenshot-screen; }
   Alt+Print  { screenshot-window; }
 
-  Mod+V       { toggle-window-floating; }
-  Mod+Shift+V { switch-focus-between-floating-and-tiling; }
+  Mod+Ctrl+V       { toggle-window-floating; }
+  Mod+V { switch-focus-between-floating-and-tiling; }
 
   Mod+T { toggle-column-tabbed-display; }
 

@@ -1,0 +1,58 @@
+@theme	"/dev/null"
+@import	"macchiato.rasi"
+
+configuration {
+	show-icons: true;
+	icon-theme: "Papirus";
+        display-drun: "";
+        terminal: "footclient -o pad=0x0";
+}
+
+* {
+	background-color: @mantle;
+}
+
+window {
+	children: [ inputbar, listview ];
+	
+	border: 1;
+	border-radius: 10;
+	border-color: @surface0;
+
+	padding: 15;
+}
+
+inputbar {
+	children: [ prompt,  entry ];
+	spacing: 10;
+}
+prompt {
+	font: "Symbols Nerd Font Mono 12.5";
+	vertical-align: 0.5;
+	text-color: @sky;
+}
+entry {
+	font: "Hack Nerd Font 12.5";
+	placeholder-color: @overlay0;
+	text-color: @text;
+	placeholder: "...";
+}
+
+listview {
+	padding: 10;
+	spacing: 5;
+	lines: 8;
+}
+element {
+	children: [ element-icon, element-text ];
+	spacing: 5;
+	text-color: @overlay0;
+}
+element-text {
+	font: "Hack Nerd Font 12.5";
+	text-color: inherit;
+	vertical-align: 0.5;
+}
+element selected {
+	text-color: @text;
+}

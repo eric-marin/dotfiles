@@ -1,0 +1,50 @@
+@theme	"/dev/null"
+@import	"macchiato.rasi"
+
+configuration {
+	show-icons: false;
+}
+
+* {
+	background-color: @mantle;
+}
+
+window {
+	children: [ horibox ];
+	border: 1;
+	border-radius: 10;
+	border-color: @surface0;
+	padding: 10;
+	width: 313px;
+}
+
+horibox {
+	orientation: horizontal;
+	children: [ listview ];
+}
+
+listview {
+	layout: horizontal;
+	spacing: 10;
+	lines: 4;
+}
+
+element {
+	text-color: @overlay0;
+	border: 1;
+	border-radius: 5;
+	background-color: @crust;
+	padding: 15;
+}
+
+element-text {
+	font: "Symbols Nerd Font Mono 25";
+	text-color: inherit;
+	background-color: inherit;
+	vertical-align: 0.5;
+}
+
+element selected{
+	text-color: @base;
+	background-color: @text;
+}

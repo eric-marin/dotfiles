@@ -11,8 +11,8 @@ foot.target = "~/.config/foot/foot.ini"
 nvim.template = "nvim"
 nvim.target = "~/.cache/wal/colors-wal.vim"
 
-fuzzel.template = "fuzzel"
-fuzzel.target = "~/.config/fuzzel/fuzzel.ini"
+# fuzzel.template = "fuzzel"
+# fuzzel.target = "~/.config/fuzzel/fuzzel.ini"
 
 niri.template = "niri"
 niri.target = "~/.config/niri/config.kdl"

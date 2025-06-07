@@ -1,9 +1,9 @@
 local opt = vim.opt
 
 -- Indent
-opt.softtabstop = 2
+opt.tabstop = 2
 opt.shiftwidth = 2
-opt.expandtab = true
+opt.expandtab = false
 opt.smartindent = true
 opt.wrap = false
 

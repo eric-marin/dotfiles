@@ -18,7 +18,6 @@ heroic
 lazygit
 mako
 niri
-nvim
 obsidian
 paru
 pulse
@@ -32,3 +31,4 @@ QtProject.conf
 mimeapps.list
 user-dirs.dirs
 user-dirs.locale
+hypr/hyprlock.conf

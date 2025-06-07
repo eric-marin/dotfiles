@@ -5,13 +5,13 @@ configuration {
 }
 
 * {
-	background-color: #130A0C;
+	background-color: {{background}};
 }
 
 window {
 	children: [ horibox ];
 	border: 1;
-	border-color: #72595E;
+	border-color: {{color1}};
 	padding: 5;
 	width: 416px;
 }
@@ -28,8 +28,8 @@ listview {
 }
 
 element {
-	text-color: #D7D1C0;
-	background-color: #33272A;
+	text-color: {{foreground}};
+	background-color: {{color0}};
 	padding: 15;
 }
 
@@ -42,5 +42,5 @@ element-text {
 
 element selected{
 	text-color: inherit;
-	background-color: #95736A;
+	background-color: {{color4}};
 }

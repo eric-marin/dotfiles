@@ -25,3 +25,12 @@ mako.target = "~/.config/mako/config"
 
 waybar.template = "waybar"
 waybar.target = "~/.config/waybar/style.css"
+
+rofi-applauncher.template = "rofi-applauncher"
+rofi-applauncher.target = "~/.config/rofi/applauncher.rasi"
+
+rofi-powermenu.template = "rofi-powermenu"
+rofi-powermenu.target = "~/.config/rofi/powermenu.rasi"
+
+rofi-wallpapermenu.template = "rofi-wallpapermenu"
+rofi-wallpapermenu.target = "~/.config/rofi/wallpapermenu.rasi"

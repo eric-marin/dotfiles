@@ -1,9 +1,5 @@
 @theme	"/dev/null"
 
-configuration {
-	show-icons: false;
-}
-
 * {
 	background-color: #130A0C;
 }
@@ -13,7 +9,7 @@ window {
 	border: 1;
 	border-color: #72595E;
 	padding: 5;
-	width: 416px;
+	width: 797;
 }
 
 horibox {
@@ -24,23 +20,22 @@ horibox {
 listview {
 	layout: horizontal;
 	spacing: 5;
-	lines: 6;
+	children: [element-icon];
 }
 
 element {
-	text-color: #D7D1C0;
-	background-color: #33272A;
-	padding: 15;
+	border-color: #33272A;
+	border: 1;
+	children: [element-icon];
 }
 
-element-text {
-	font: "Symbols Nerd Font Mono 25";
-	text-color: inherit;
-	background-color: inherit;
-	vertical-align: 0.5;
+element-icon {
+	expand: true;
+	size: 33%;
+	squared: false;
 }
 
 element selected{
 	text-color: inherit;
-	background-color: #95736A;
+	border-color: #95736A;
 }

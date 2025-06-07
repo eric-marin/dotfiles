@@ -9,8 +9,8 @@ configuration {
 }
 
 * {
-	background-color: #130A0C;
-	color: #D7D1C0;
+	background-color: {{background}};
+	color: {{foreground}};
 }
 
 window {

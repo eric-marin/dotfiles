@@ -4,7 +4,7 @@
     "margin": 0,
     "reload_style_on_change": true,
     "fixed-center": false,
-    "modules-left": ["clock", "network", "bluetooth", "backlight", "pulseaudio"],
+    "modules-left": ["clock", "network", "bluetooth", "backlight", "pulseaudio", "idle_inhibitor"],
     "modules-center": ["tray"],
     "modules-right": ["cpu", "memory", "temperature", "disk", "battery"],
     "tray": {
@@ -32,6 +32,15 @@
             "default": ["󰕿", "󰖀", "󰕾"],
         },
         "on-click": "foot pulsemixer"
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "<span font-family='Symbols Nerd Font Mono'></span>",
+            "deactivated": "<span font-family='Symbols Nerd Font Mono'></span>"
+        },
+        "tooltip-format-activated": "Inhibiting",
+        "tooltip-format-deactivated": ""
     },
     "backlight": {
         "device": "intel_backlight",

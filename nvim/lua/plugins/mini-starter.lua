@@ -177,6 +177,13 @@ Quotes = {
   The question of whether computers can think is like the question of whether submarines can swim.
     ~ Edsger Dijkstra
   ]],
+  [[
+  Of course, I'd also suggest that whoever was the genius who thought it was a good idea to read
+  things ONE F*CKING BYTE AT A TIME with system calls for each byte should be retroactively aborted.
+  Who the f*ck does idiotic things like that? How did they not die as babies, considering that they
+  were likely too stupid to find a tit to suck on?
+    ~ Linus Torvalds
+  ]]
 }
 
 

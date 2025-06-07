@@ -80,6 +80,12 @@ local config = function()
   lsp.enable("hls")
   lsp.config("hls", {
     capabilities = capabilities,
+    settings = {
+      ['haskell'] = {
+        cabalFormattingProvider = "cabal-fmt",
+        formattingProvider = "ormolu"
+      },
+    },
   })
   -- Lua
   lsp.enable("lua_ls")

@@ -10,9 +10,10 @@ set -x SWWW_TRANSITION_FPS 60
 set -x SWWW_TRANSITION_DURATION 2
 set -U img $argv[1]
 
-niri msg action do-screen-transition
-swww img $img
-wallust run $img
-makoctl reload
-notify-send -i $img "Wallust" "Changed wallpaper and palette."
+wallust run $img; and begin
+	niri msg action do-screen-transition 
+	swww img $img
+	makoctl reload
+	notify-send -i $img "Wallust" "Changed wallpaper and palette."
+end;
 

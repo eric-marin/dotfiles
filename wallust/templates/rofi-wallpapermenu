@@ -3,38 +3,39 @@
 * {
 	background-color: {{background}};
 }
-
 window {
 	children: [ horibox ];
 	border: 1;
 	border-color: {{color1}};
 	padding: 5;
-	width: 797;
+	width: 1197;
 }
-
 horibox {
 	orientation: horizontal;
-	children: [ listview ];
+	children: [ entry, listview ];
 }
-
+entry {
+	enabled: false;
+}
 listview {
-	layout: horizontal;
 	spacing: 5;
+	columns: 3;
+	lines: 3;
+	fixed-columns: true;
+	fixed-height: true;
 	children: [element-icon];
 }
-
 element {
 	border-color: {{color0}};
 	border: 1;
 	children: [element-icon];
 }
-
 element-icon {
 	expand: true;
-	size: 33%;
-	squared: false;
+	size: 50%;
+	margin: -85 0;
+	squared: true;
 }
-
 element selected{
 	text-color: inherit;
 	border-color: {{color4}};

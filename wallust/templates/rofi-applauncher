@@ -5,27 +5,22 @@ configuration {
 	show-icons: true;
 	icon-theme: "Papirus";
 	terminal: "foot -o pad=0x0";
-	matching: "fuzzy";
 }
-
 * {
 	background-color: {{background}};
 	color: {{foreground}};
 }
-
 window {
 	location: north west;
 	anchor: center;
-	width: 589;
+	width: 580;
 	y-offset: -22;
 	x-offset: 260;
-	padding: 3 0 3 5;
+	padding: 3 5 3 5;
 }
-
 mainbox {
 	orientation: horizontal;
 }
-
 inputbar {
 	children: [ prompt, entry ];
 	spacing: 5;
@@ -38,11 +33,14 @@ entry {
 	placeholder: "...";
 	width: 50;
 }
-
 listview {
 	spacing: 10;
 	layout: horizontal;
 }
 element-text {
 	font: "Hack Nerd Font 10";
+	text-color: inherit;
+}
+element selected {
+	color: {{color4}};
 }

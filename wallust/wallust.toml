@@ -17,8 +17,11 @@ nvim.target = "~/.cache/wal/colors-wal.vim"
 niri.template = "niri"
 niri.target = "~/.config/niri/config.kdl"
 
-hyprlock.template = "hyprlock"
-hyprlock.target = "~/.config/hypr/hyprlock.conf"
+# hyprlock.template = "hyprlock"
+# hyprlock.target = "~/.config/hypr/hyprlock.conf"
+
+swaylock.template = "swaylock"
+swaylock.target = "~/.config/swaylock/config"
 
 mako.template = "mako"
 mako.target = "~/.config/mako/config"

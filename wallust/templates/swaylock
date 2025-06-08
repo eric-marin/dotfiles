@@ -1,0 +1,36 @@
+indicator-caps-lock
+indicator-idle-visible
+indicator-radius=100
+
+font=Hack Nerd Font
+font-size=50
+
+clock
+timestr=%H:%M:%S
+datestr=%a %D
+
+image={{wallpaper}}
+effect-blur=5x2
+
+key-hl-color={{color6 | strip}}
+caps-lock-key-hl-color={{color6 | strip}}
+bs-hl-color={{color5 | strip}}
+caps-lock-bs-hl-color={{color5 | strip}}
+
+inside-color={{background}}
+inside-clear-color={{background}}
+inside-caps-lock-color={{background}}
+inside-ver-color={{background}}
+inside-wrong-color={{background}}
+
+ring-color={{color0 | strip}}
+ring-clear-color={{color5 | strip}}
+ring-caps-lock-color={{color2 | strip}}
+ring-ver-color={{color4 | strip}}
+ring-wrong-color={{color3 | strip}}
+
+text-color={{foreground | strip}}
+text-clear-color={{color5 | strip}}
+text-caps-lock-color={{color2 | strip}}
+text-ver-color={{color4 | strip}}
+text-wrong-color={{color3 | strip}}

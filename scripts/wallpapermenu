@@ -1,6 +1,6 @@
 #!/usr/bin/fish
 
-set dir "/home/eric.marin/Pictures/Backgrounds/"
+set dir "$HOME/Pictures/Backgrounds/"
 set chosen (
   for file in (find $dir -type f)
     if test -z $img; or test $file != $img

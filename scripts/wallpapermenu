@@ -6,6 +6,6 @@ set chosen (
     if test -z $img; or test $file != $img
       echo -en "$file\0icon\x1fthumbnail://$file\n"
     end
-  end | rofi -dmenu -show-icons -theme ~/.config/rofi/wallpapermenu.rasi)
+  end | rofi -dmenu -p " " -show-icons -theme ~/.config/rofi/wallpapermenu.rasi)
 
 ~/.config/scripts/set_background (echo $chosen)

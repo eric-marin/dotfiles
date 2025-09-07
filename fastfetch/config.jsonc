@@ -20,10 +20,11 @@
         "separator": " "
     },
     "modules": [
-			{
-					"type": "title",
-					"keyWidth": 10
-			},
+			"break",
+			// {
+					// "type": "title",
+					// "keyWidth": 10
+			// },
 			{
 					"type": "os",
 					"key": " ",

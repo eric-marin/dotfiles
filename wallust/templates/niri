@@ -101,7 +101,12 @@ layout {
     gaps-between-tabs 5
     active-color "{{color1}}"
     inactive-color "{{color0}}"
+		length total-proportion=1.0
   }
+
+	insert-hint {
+		color "{{color1}}"
+	}
 }
 
 overview {
@@ -143,7 +148,7 @@ binds {
   Mod+Space          hotkey-overlay-title="Spawn Applauncher"   { spawn "rofi" "-show" "drun" "-theme" "~/.config/rofi/applauncher.rasi"; }
   Mod+Escape         hotkey-overlay-title="Spawn Powermenu"     { spawn "~/.config/scripts/powermenu"; }
   Mod+W              hotkey-overlay-title="Spawn Wallpapermenu" { spawn "~/.config/scripts/wallpapermenu"; }
-  // Mod+W repeat=false hotkey-overlay-title="Random Wallpaper"  { spawn "~/.config/scripts/set_random" "/home/eric.marin/Pictures/Backgrounds/"; }
+  Mod+Shift+W repeat=false hotkey-overlay-title="Random Wallpaper"  { spawn "~/.config/scripts/set_random" "/home/eric.marin/Pictures/Backgrounds/"; }
 
   XF86AudioRaiseVolume  allow-when-locked=true { spawn "pamixer" "-i" "5"; }
   XF86AudioLowerVolume  allow-when-locked=true { spawn "pamixer" "-d" "5"; }

@@ -1,4 +1,4 @@
-lock 'swaylock -fe'
+lock 'physlock -l ; swaylock -fe ; physlock -L'
 before-sleep 'loginctl lock-session ; niri msg eDP-1 off'
 after-resume 'niri msg eDP-1 on'
 timeout 300 'brightnessctl -se set 10%' resume 'brightnessctl -r'

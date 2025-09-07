@@ -9,14 +9,15 @@ configuration {
 * {
 	background-color: {{background}};
 	color: {{foreground}};
+	font: "Hack Nerd Font 10";
 }
 window {
 	location: north west;
 	anchor: center;
-	width: 580;
+	width: 598;
 	y-offset: -22;
-	x-offset: 260;
-	padding: 3 5 3 5;
+	x-offset: 251;
+	padding: 3 5 3 3;
 }
 mainbox {
 	orientation: horizontal;
@@ -32,7 +33,6 @@ listview {
 	layout: horizontal;
 }
 element-text {
-	font: "Hack Nerd Font 10";
 	color: inherit;
 }
 element selected {

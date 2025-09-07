@@ -2,20 +2,22 @@
 
 * {
 	background-color: {{background}};
+	color: {{foreground}};
+	font: "Hack Nerd Font 10";
 }
 window {
-	children: [ horibox ];
 	border: 1;
 	border-color: {{color1}};
 	padding: 5;
 	width: 1197;
 }
-horibox {
-	orientation: horizontal;
-	children: [ entry, listview ];
+mainbox {
+	spacing: 5;
 }
-entry {
-	enabled: false;
+inputbar {
+	border: 1;
+	border-color: {{color1}};
+	padding: 5;
 }
 listview {
 	spacing: 5;
@@ -23,17 +25,17 @@ listview {
 	lines: 3;
 	fixed-columns: true;
 	fixed-height: true;
-	children: [element-icon];
+	cycle: true;
 }
 element {
 	border-color: {{color0}};
 	border: 1;
-	children: [element-icon];
+	children: [ element-icon ];
 }
 element-icon {
 	expand: true;
 	size: 50%;
-	margin: -85 0;
+	margin: -100 0;
 	squared: true;
 }
 element selected{

@@ -1,6 +1,8 @@
 local config = function()
 	vim.diagnostic.config({
 		severity_sort = true,
+		virtual_lines = true,
+		virtual_text = false
 	})
 	require("lspsaga").setup({
 		ui = {
@@ -17,9 +19,6 @@ local config = function()
 				shuttle = "<Tab>",
 			}
 		},
-	})
-	vim.diagnostic.config({
-		virtual_text = true
 	})
 end
 

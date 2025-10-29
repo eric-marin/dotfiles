@@ -81,12 +81,17 @@
         "tooltip-format": "{used} / {total}"
     },
     "battery": {
-	"interval": 5,
+				"interval": 5,
         "states": {
             "warning": 25,
+						"notfull": 99,
         },
-        "format": "<span font-family='Symbols Nerd Font Mono'>{icon}</span> {capacity}%",
-	"format-charging": "<span font-family='Symbols Nerd Font Mono'>󰂄</span>{capacity}%",
+				"format": "<span font-family='Symbols Nerd Font Mono'>{icon}</span>{capacity}%",
+        "format-notfull": "<span font-family='Symbols Nerd Font Mono'>{icon}</span> {capacity}%",
+        "format-warning": "<span font-family='Symbols Nerd Font Mono'>{icon}</span> {capacity}%",
+				"format-charging": "<span font-family='Symbols Nerd Font Mono'>󰂄</span>{capacity}%",
+				"format-charging-notfull": "<span font-family='Symbols Nerd Font Mono'>󰂄</span> {capacity}%",
+				"format-charging-warning": "<span font-family='Symbols Nerd Font Mono'>󰂄</span> {capacity}%",
         "format-icons": ["󰂎","󰁺","󰁻","󰁼","󰁽","󰁾","󰁿","󰂀","󰂁","󰂂","󰁹"],
     },
     "clock": {

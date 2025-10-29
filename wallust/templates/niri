@@ -136,6 +136,12 @@ window-rule {
 window-rule {
   match app-id="SFML"
 }
+window-rule {
+	match is-floating=true
+	shadow {
+		on
+	}
+}
 
 switch-events {
   lid-open { spawn "niri" "msg" "action" "power-on-monitors"; }
@@ -148,12 +154,11 @@ binds {
   Mod+Space          hotkey-overlay-title="Spawn Applauncher"   { spawn "rofi" "-show" "drun" "-theme" "~/.config/rofi/applauncher.rasi"; }
   Mod+Escape         hotkey-overlay-title="Spawn Powermenu"     { spawn "~/.config/scripts/powermenu"; }
   Mod+W              hotkey-overlay-title="Spawn Wallpapermenu" { spawn "~/.config/scripts/wallpapermenu"; }
-  Mod+Shift+W repeat=false hotkey-overlay-title="Random Wallpaper"  { spawn "~/.config/scripts/set_random" "/home/eric.marin/Pictures/Backgrounds/"; }
 
   XF86AudioRaiseVolume  allow-when-locked=true { spawn "pamixer" "-i" "5"; }
   XF86AudioLowerVolume  allow-when-locked=true { spawn "pamixer" "-d" "5"; }
   XF86AudioMute         allow-when-locked=true { spawn "pamixer" "-t"; }
-  XF86AudioMicMute      allow-when-locked=true { spawn "pamixer" "--default-source" "-m"; }
+  XF86AudioMicMute      allow-when-locked=true { spawn "pamixer" "--default-source" "-t"; }
   XF86MonBrightnessUp   allow-when-locked=true { spawn "brightnessctl" "-e" "s" "+5%"; }
   XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "-e" "s" "5%-"; }
 

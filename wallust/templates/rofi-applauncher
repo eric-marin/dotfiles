@@ -14,9 +14,9 @@ configuration {
 window {
 	location: north west;
 	anchor: center;
-	width: 598;
+	width: 589;
 	y-offset: -22;
-	x-offset: 251;
+	x-offset: 260;
 	padding: 3 5 3 3;
 }
 mainbox {

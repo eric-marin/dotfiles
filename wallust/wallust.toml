@@ -1,39 +1,16 @@
 backend = "fastresize"
 check_contrast = true
-color_space = "lch"
+color_space = "lab"
 fallback_generator = "complementary"
 palette = "ansidark16"
 
 [templates]
-foot.template = "foot"
-foot.target = "~/.config/foot/foot.ini"
-
-nvim.template = "nvim"
-nvim.target = "~/.cache/wal/colors-wal.vim"
-
-# fuzzel.template = "fuzzel"
-# fuzzel.target = "~/.config/fuzzel/fuzzel.ini"
-
-niri.template = "niri"
-niri.target = "~/.config/niri/config.kdl"
-
-# hyprlock.template = "hyprlock"
-# hyprlock.target = "~/.config/hypr/hyprlock.conf"
-
-swaylock.template = "swaylock"
-swaylock.target = "~/.config/swaylock/config"
-
-mako.template = "mako"
-mako.target = "~/.config/mako/config"
-
-waybar.template = "waybar"
-waybar.target = "~/.config/waybar/style.css"
-
-rofi-applauncher.template = "rofi-applauncher"
-rofi-applauncher.target = "~/.config/rofi/applauncher.rasi"
-
-rofi-powermenu.template = "rofi-powermenu"
-rofi-powermenu.target = "~/.config/rofi/powermenu.rasi"
-
-rofi-wallpapermenu.template = "rofi-wallpapermenu"
-rofi-wallpapermenu.target = "~/.config/rofi/wallpapermenu.rasi"
+foot =								{ src = "foot",								dst = "~/.config/foot/foot.ini" }
+nvim =								{ src = "nvim",								dst = "~/.cache/wallust/colors_neopywal.vim" }
+niri =								{ src = "niri",								dst = "~/.config/niri/config.kdl" }
+swaylock =						{ src = "swaylock",						dst = "~/.config/swaylock/config" }
+mako =								{ src = "mako",								dst = "~/.config/mako/config" }
+waybar =							{ src = "waybar",							dst = "~/.config/waybar/style.css" }
+rofi-applauncher =		{ src = "rofi-applauncher",		dst = "~/.config/rofi/applauncher.rasi" }
+rofi-powermenu =			{ src = "rofi-powermenu",			dst = "~/.config/rofi/powermenu.rasi" }
+rofi-wallpapermenu =	{ src = "rofi-wallpapermenu",	dst = "~/.config/rofi/wallpapermenu.rasi" }

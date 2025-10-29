@@ -1,19 +1,26 @@
 local init = function()
-  vim.cmd.colorscheme("neopywal")
+	vim.cmd.colorscheme("neopywal")
 end
 
-local opts = {
-  use_wallust = true,
-  plugins = {
-    treesitter = true
-  }
-}
+local config = function()
+	require("neopywal").setup({
+		plugins = {
+			treesitter = true
+		},
+		custom_colors = {},
+		custom_highlights = {},
+		use_palette = {
+			light = "wallust",
+			dark = "wallust",
+		},
+	})
+end
 
 return {
-  "RedsXDD/neopywal.nvim",
-  lazy = false,
-  name = "neopywal",
-  init = init,
-  opts = opts,
-  priority = 1000,
+	"RedsXDD/neopywal.nvim",
+	lazy = false,
+	name = "neopywal",
+	init = init,
+	config = config,
+	priority = 1000,
 }

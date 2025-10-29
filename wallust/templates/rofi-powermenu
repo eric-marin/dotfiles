@@ -7,18 +7,19 @@ configuration {
 	background-color: {{background}};
 }
 window {
-	children: [ horibox ];
+	location: north east;
+	children: [ box ];
 	border: 1;
 	border-color: {{color1}};
 	padding: 5;
-	width: 416px;
+	width: 60px;
 }
-horibox {
-	orientation: horizontal;
+box {
+	orientation: vertical;
 	children: [ listview ];
 }
 listview {
-	layout: horizontal;
+	layout: vertical;
 	spacing: 5;
 	lines: 6;
 }
@@ -28,7 +29,7 @@ element {
 	padding: 15;
 }
 element-text {
-	font: "Symbols Nerd Font Mono 25";
+	font: "Symbols Nerd Font Mono 13";
 	text-color: inherit;
 	background-color: inherit;
 	vertical-align: 0.5;

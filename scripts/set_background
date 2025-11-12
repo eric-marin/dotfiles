@@ -14,7 +14,7 @@ wallust run $argv[1]; and begin
 	set -U img $argv[1]
 	swww img $argv[1]
 	makoctl reload
-	notify-send -i $argv[1] "Wallust" "Changed wallpaper and palette."
+	notify-send -i $img "Wallust" "Changed wallpaper and palette."
 end; or begin
 	notify-send -u critical "Wallust" "Failed to change palette"
 end;

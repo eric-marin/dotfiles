@@ -26,8 +26,19 @@
         "on-click": "foot -T nmtui -o pad=0x0 nmtui"
     },
     "pulseaudio": {
-        "format": "<span font-family='Symbols Nerd Font Mono'>{icon}</span> {volume}%",
-        "format-muted": "<span font-family='Symbols Nerd Font Mono'>󰝟</span> {volume}%",
+				"states": {
+					"notempty": 9,
+					"notfull": 99,
+				},
+        "format": "<span font-family='Symbols Nerd Font Mono'>{icon}</span>{volume}%",
+        "format-notfull": "<span font-family='Symbols Nerd Font Mono'>{icon}</span> {volume}%",
+        "format-notempty": "<span font-family='Symbols Nerd Font Mono'>{icon}</span>  {volume}%",
+        "format-muted": "<span font-family='Symbols Nerd Font Mono'>󰝟</span>{volume}%",
+        "format-muted-notfull": "<span font-family='Symbols Nerd Font Mono'>󰝟</span> {volume}%",
+        "format-muted-notempty": "<span font-family='Symbols Nerd Font Mono'>󰝟</span>  {volume}%",
+        "format-bluetooth": "<span font-family='Symbols Nerd Font Mono'>{icon}</span>{volume}%",
+        "format-bluetooth-notfull": "<span font-family='Symbols Nerd Font Mono'>{icon}</span> {volume}%",
+        "format-bluetooth-notempty": "<span font-family='Symbols Nerd Font Mono'>{icon}</span>  {volume}%",
         "format-icons": {
             "default": ["󰕿", "󰖀", "󰕾"],
         },
@@ -44,7 +55,13 @@
     },
     "backlight": {
         "device": "intel_backlight",
-        "format": "<span font-family='Symbols Nerd Font Mono'>{icon}</span> {percent}%",
+				"states": {
+					"notempty": 10,
+					"notfull": 100,
+				},
+        "format": "<span font-family='Symbols Nerd Font Mono'>{icon}</span>  {percent}%",
+        "format-notfull": "<span font-family='Symbols Nerd Font Mono'>{icon}</span>{percent}%",
+        "format-notempty": "<span font-family='Symbols Nerd Font Mono'>{icon}</span> {percent}%",
         "format-icons": ["", "", "", "", "", "", "", "", ""],
         "tooltip": false
     },
@@ -77,21 +94,30 @@
         "tooltip-format": "{used:0.1f}GiB / {total:0.1f}GiB"
     },
     "disk": {
-        "format": "<span font-family='Symbols Nerd Font Mono'>󰋊</span> {percentage_used}%",
+				"states": {
+						"notempty": 10,
+						"notfull": 100,
+				},
+        "format": "<span font-family='Symbols Nerd Font Mono'>󰋊</span>  {percentage_used}%",
+        "format-notfull": "<span font-family='Symbols Nerd Font Mono'>󰋊</span>{percentage_used}%",
+        "format-notempty": "<span font-family='Symbols Nerd Font Mono'>󰋊</span> {percentage_used}%",
         "tooltip-format": "{used} / {total}"
     },
     "battery": {
 				"interval": 5,
         "states": {
+						"notempty": 9,
             "warning": 25,
 						"notfull": 99,
         },
 				"format": "<span font-family='Symbols Nerd Font Mono'>{icon}</span>{capacity}%",
         "format-notfull": "<span font-family='Symbols Nerd Font Mono'>{icon}</span> {capacity}%",
         "format-warning": "<span font-family='Symbols Nerd Font Mono'>{icon}</span> {capacity}%",
+        "format-notempty": "<span font-family='Symbols Nerd Font Mono'>{icon}</span>  {capacity}%",
 				"format-charging": "<span font-family='Symbols Nerd Font Mono'>󰂄</span>{capacity}%",
 				"format-charging-notfull": "<span font-family='Symbols Nerd Font Mono'>󰂄</span> {capacity}%",
 				"format-charging-warning": "<span font-family='Symbols Nerd Font Mono'>󰂄</span> {capacity}%",
+				"format-charging-notempty": "<span font-family='Symbols Nerd Font Mono'>󰂄</span>  {capacity}%",
         "format-icons": ["󰂎","󰁺","󰁻","󰁼","󰁽","󰁾","󰁿","󰂀","󰂁","󰂂","󰁹"],
     },
     "clock": {

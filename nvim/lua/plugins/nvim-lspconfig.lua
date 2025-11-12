@@ -112,6 +112,11 @@ local config = function()
 	lsp.config("zls", {
 		capabilities = capabilities,
 	})
+	-- Python
+	lsp.enable("pyright")
+	lsp.config("pyright", {
+		capabilities = capabilities,
+	})
 end
 
 return {

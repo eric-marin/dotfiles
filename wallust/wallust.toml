@@ -1,4 +1,4 @@
-backend = "fastresize"
+backend = "kmeans"
 check_contrast = true
 color_space = "lab"
 fallback_generator = "complementary"

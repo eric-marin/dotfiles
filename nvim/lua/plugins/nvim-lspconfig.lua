@@ -123,5 +123,5 @@ return {
 	"neovim/nvim-lspconfig",
 	config = config,
 	lazy = true,
-	event = { "BufReadPost", "BufWritePost", "BufNewFile" }
+	event = { "FileType" },
 }

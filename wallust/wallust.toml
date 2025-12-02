@@ -1,8 +1,8 @@
-backend = "kmeans"
+backend = "full"
 check_contrast = true
-color_space = "lab"
+color_space = "salience"
 fallback_generator = "complementary"
-palette = "ansidark16"
+palette = "dark16"
 
 [templates]
 foot =								{ src = "foot",								dst = "~/.config/foot/foot.ini" }

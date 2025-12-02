@@ -9,4 +9,4 @@ These are current my dotfiles:
 - Editor: [neovim](https://github.com/neovim/neovim)
 - Colorscheme: [wallust](https://codeberg.org/explosion-mental/wallust)
 
-The missing configuration files are in ```wallust/templates/```
+The missing configuration files are in ```wallust/templates/```.

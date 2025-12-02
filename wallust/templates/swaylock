@@ -7,7 +7,7 @@ font-size=50
 
 clock
 timestr=%H:%M:%S
-datestr=%a %D
+datestr=%a %d/%m/%y
 
 image={{wallpaper}}
 effect-blur=5x2

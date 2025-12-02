@@ -1,0 +1,2 @@
+[Service]
+ExecStart=%h/.config/scripts/set_random %h/Pictures/Backgrounds/

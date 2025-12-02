@@ -38,7 +38,8 @@ element-icon {
 	margin: -100 0;
 	squared: true;
 }
-element selected{
+element selected {
 	text-color: inherit;
+	border: 5;
 	border-color: {{color4}};
 }

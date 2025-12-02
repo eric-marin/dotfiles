@@ -2,14 +2,24 @@ local opt = vim.opt
 
 -- Indent
 opt.tabstop = 2
+opt.softtabstop = 2
 opt.shiftwidth = 2
 opt.expandtab = false
 opt.smartindent = true
 opt.wrap = false
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "bend",
+	callback = function()
+		vim.opt_local.expandtab = true
+		vim.opt_local.tabstop = 4
+		vim.opt_local.shiftwidth = 4
+	end,
+})
+
 
 -- Appearance
 opt.number = true
-opt.relativenumber = true
+opt.relativenumber = false
 opt.cursorline = true
 opt.termguicolors = true
 opt.showmode = true

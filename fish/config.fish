@@ -8,28 +8,15 @@ function fish_prompt
   end) \ (set_color $fish_color_cwd) (prompt_pwd --full-length-dirs 5) (set_color normal)
 end
 
-function start_niri
-  if systemctl --user -q is-active niri.service
-    echo 'A Niri session is already running.'
-    exit 1
-  end
-  systemctl --user reset-failed
-  dbus-update-activation-environment --all
-  systemctl --user --wait start niri.service
-  systemctl --user start --job-mode=replace-irreversibly niri-shutdown.target
-  systemctl --user unset-environment WAYLAND_DISPLAY XDG_SESSION_TYPE XDG_CURRENT_DESKTOP NIRI_SOCKET
-end
-
 fish_add_path -p ~/.cargo/bin ~/.ghcup/bin
 set -U fish_greeting
 set EDITOR "neovim"
-export DISPLAY=:0
 
 if status is-login
-  start_niri
-  kill $fish_pid
+	killall ssh-agent 1> /dev/null 2>&1
+	eval (ssh-agent -c) 1> /dev/null 2>&1
+	ssh-add ~/.ssh/zenbook 1> /dev/null 2>&1
+	exec niri-session -l 1> /dev/null 2>&1
 end
 
-
-# Created by `pipx` on 2025-05-03 19:57:49
-set PATH $PATH /home/eric.marin/.local/bin
+zoxide init fish | source

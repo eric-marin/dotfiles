@@ -36,5 +36,5 @@ element-text {
 	color: inherit;
 }
 element selected {
-	color: {{color4}};
+	color: {{color1}};
 }

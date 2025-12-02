@@ -69,7 +69,7 @@ tooltip label {
   color: {{foreground}};
 }
 
-#bluetooth.off, #pulseaudio.muted, #network.disconnected, #battery.warning, #idle_inhibitor.deactivated {
+#bluetooth.off, #pulseaudio.muted, #network.disconnected, #battery.warning, #battery.notempty, #idle_inhibitor.deactivated {
   background: {{color0}};
 }
 #bluetooth.off {
@@ -81,7 +81,7 @@ tooltip label {
 #network.disconnected {
   color: {{color5}};
 }
-#battery.warning {
+#battery.warning, #battery.notempty {
   color: {{color6}};
 }
 #battery.charging {

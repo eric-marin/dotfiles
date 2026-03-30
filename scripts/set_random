@@ -6,9 +6,8 @@ if test (count $argv) -lt 1; or not test -d $argv[1]
 end
 
 ~/.config/scripts/set_background (
-  for file in (fd . $argv[1] -t f)
+  for file in (fd . $argv[1] -t f -d 1)
     if test -z $IMG; or test $file != $IMG
       echo (math (random) % 1000)":$file"
     end
   end | sort -n | head -n 1 | cut -d ':' -f2)
-

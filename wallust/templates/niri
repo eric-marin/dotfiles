@@ -1,5 +1,6 @@
 prefer-no-csd
 screenshot-path "~/Pictures/Screenshots/%Y%m%d-%H%M%S.png"
+spawn-sh-at-startup "fish -c 'swaybg -i $IMG &'"
 
 environment {
   QT_QPA_PLATFORM "wayland"
@@ -199,9 +200,9 @@ binds {
   Mod+Space				hotkey-overlay-title="Spawn Applauncher"		{ spawn "rofi" "-show" "drun" "-theme" "~/.config/rofi/applauncher.rasi"; }
   Mod+Escape			hotkey-overlay-title="Spawn Powermenu"      { spawn "~/.config/scripts/powermenu"; }
   Mod+W						hotkey-overlay-title="Spawn Wallpapermenu"  { spawn-sh "~/.config/scripts/wallpapermenu ~/Pictures/Backgrounds/"; }
-  Mod+Alt+W																										{ spawn-sh "~/.config/scripts/wallpapermenu ~/Pictures/Misc/Backgrounds/"; }
+  Mod+Alt+W																										{ spawn-sh "~/.config/scripts/wallpapermenu ~/Pictures/Backgrounds/Alt/"; }
   Mod+Shift+W			hotkey-overlay-title="Random Wallpaper"     { spawn-sh "~/.config/scripts/set_random ~/Pictures/Backgrounds/"; }
-  Mod+Shift+Alt+W																							{ spawn-sh "~/.config/scripts/set_random ~/Pictures/Misc/Backgrounds/"; }
+  Mod+Shift+Alt+W																							{ spawn-sh "~/.config/scripts/set_random ~/Pictures/Backgrounds/Alt/"; }
 
   XF86AudioRaiseVolume  allow-when-locked=true { spawn "pamixer" "-i" "5"; }
   XF86AudioLowerVolume  allow-when-locked=true { spawn "pamixer" "-d" "5"; }

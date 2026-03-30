@@ -13,20 +13,29 @@ local config = function()
 
 			vim.keymap.set("n", "<.", "<Plug>(neorg.promo.demote)", { buffer = true })
 			vim.keymap.set("n", "<<", "<Plug>(neorg.promo.demote.nested)", { buffer = true })
-			vim.keymap.set("n", "<C-Space>", "<Plug>(neorg.qol.todo-items.todo.task-cycle)", { buffer = true })
+			vim.keymap.set("n", "<C-Space>", "<Plug>(neorg.qol.todo-items.todo.task-cycle)",
+				{ buffer = true })
 			vim.keymap.set("n", "<CR>", "<Plug>(neorg.esupports.hop.hop-link)", { buffer = true })
-			vim.keymap.set("n", "<Space>cm", "<Plug>(neorg.looking-glass.magnify-code-block)", { buffer = true })
+			vim.keymap.set("n", "<Space>cm", "<Plug>(neorg.looking-glass.magnify-code-block)",
+				{ buffer = true })
 			vim.keymap.set("n", "<Space>id", "<Plug>(neorg.tempus.insert-date)", { buffer = true })
 			vim.keymap.set("n", "<Space>li", "<Plug>(neorg.pivot.list.invert)", { buffer = true })
 			vim.keymap.set("n", "<Space>lt", "<Plug>(neorg.pivot.list.toggle)", { buffer = true })
-			vim.keymap.set("n", "<Space>ma", "<Plug>(neorg.qol.todo-items.todo.task-ambiguous)", { buffer = true })
-			vim.keymap.set("n", "<Space>mc", "<Plug>(neorg.qol.todo-items.todo.task-cancelled)", { buffer = true })
+			vim.keymap.set("n", "<Space>ma", "<Plug>(neorg.qol.todo-items.todo.task-ambiguous)",
+				{ buffer = true })
+			vim.keymap.set("n", "<Space>mc", "<Plug>(neorg.qol.todo-items.todo.task-cancelled)",
+				{ buffer = true })
 			vim.keymap.set("n", "<Space>md", "<Plug>(neorg.qol.todo-items.todo.task-done)", { buffer = true })
-			vim.keymap.set("n", "<Space>mh", "<Plug>(neorg.qol.todo-items.todo.task-on-hold)", { buffer = true })
-			vim.keymap.set("n", "<Space>mi", "<Plug>(neorg.qol.todo-items.todo.task-important)", { buffer = true })
-			vim.keymap.set("n", "<Space>mp", "<Plug>(neorg.qol.todo-items.todo.task-pending)", { buffer = true })
-			vim.keymap.set("n", "<Space>mr", "<Plug>(neorg.qol.todo-items.todo.task-recurring)", { buffer = true })
-			vim.keymap.set("n", "<Space>mu", "<Plug>(neorg.qol.todo-items.todo.task-undone)", { buffer = true })
+			vim.keymap.set("n", "<Space>mh", "<Plug>(neorg.qol.todo-items.todo.task-on-hold)",
+				{ buffer = true })
+			vim.keymap.set("n", "<Space>mi", "<Plug>(neorg.qol.todo-items.todo.task-important)",
+				{ buffer = true })
+			vim.keymap.set("n", "<Space>mp", "<Plug>(neorg.qol.todo-items.todo.task-pending)",
+				{ buffer = true })
+			vim.keymap.set("n", "<Space>mr", "<Plug>(neorg.qol.todo-items.todo.task-recurring)",
+				{ buffer = true })
+			vim.keymap.set("n", "<Space>mu", "<Plug>(neorg.qol.todo-items.todo.task-undone)",
+				{ buffer = true })
 			vim.keymap.set("n", "<M-CR>", "<Plug>(neorg.esupports.hop.hop-link.vsplit)", { buffer = true })
 			vim.keymap.set("n", "<M-t>", "<Plug>(neorg.esupports.hop.hop-link.tab-drop)", { buffer = true })
 			vim.keymap.set("n", ">.", "Plug>(neorg.promo.promote)", { buffer = true })

@@ -5,12 +5,11 @@ if test (count $argv) -lt 1; or not test -f $argv[1]
 end
 
 wallust run $argv[1] -Ts; and begin
-	set -U IMG $argv[1]
-	echo "IMG=$IMG" > ~/.config/scripts/IMG.env
-	niri msg action do-screen-transition 
-	wallust -q run $IMG
-	systemctl --user restart swaybg.service
-	makoctl reload
+	niri msg action do-screen-transition
+	set -U IMG $argv[1] &
+	wallust -q run $IMG &
+	killall swaybg ; swaybg -i $IMG &
+	makoctl reload &
 	notify-send -i $IMG "Wallust" "Changed wallpaper and palette."
 end; or begin
 	notify-send -i $argv[1] -u critical "Wallust" "Failed to change palette"

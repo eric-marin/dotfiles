@@ -3,9 +3,8 @@
 if test -z $argv[1] 
 	echo "Provide a directory"
 else
-  set dir $argv[1]
 	set chosen (
-		for file in (find $dir -type f)
+		for file in (fd . $argv[1] -t f -d 1)
 			if test -z $IMG; or test $file != $IMG
 				echo -en "$file\0icon\x1fthumbnail://$file\n"
 			end

@@ -8,7 +8,7 @@ wallust run $argv[1] -Ts; and begin
 	niri msg action do-screen-transition
 	set -U IMG $argv[1] &
 	wallust -q run $IMG &
-	killall swaybg ; swaybg -i $IMG &
+	killall swaybg ; swaybg -i $IMG -m fill &
 	makoctl reload &
 	notify-send -i $IMG "Wallust" "Changed wallpaper and palette."
 end; or begin

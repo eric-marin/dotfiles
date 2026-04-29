@@ -1,5 +1,5 @@
 font=Hack Nerd Font:size=10,Sazanami Gothic:size=10,Noto Color Emoji:size=10
-pad=15x15
+pad=10x10x10x10 center
 dpi-aware=yes
 term=foot-extra
 

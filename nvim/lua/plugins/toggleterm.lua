@@ -1,17 +1,17 @@
 local init = function()
 	local keymap = vim.keymap
-	keymap.set("n", "<C-t>", ":ToggleTerm<Enter>",
+	--[[ keymap.set("n", "<C-t>", ":ToggleTerm<Enter>",
 		{ noremap = true, silent = true, desc = "Terminal (ToggleTerm)" }) -- Terminal
-	keymap.set("t", "<C-t>", "<C-\\><C-n>:ToggleTerm<Enter>")
+	keymap.set("t", "<C-t>", "<C-\\><C-n>:ToggleTerm<Enter>") ]]
 	keymap.set("n", "<Space>g", ":ToggleLazyGit<Enter>",
 		{ noremap = true, silent = true, desc = "LazyGit (ToggleTerm)" }) -- LazyGit
 end
 
 local config = function()
-	require("toggleterm").setup {
+	--[[ require("toggleterm").setup {
 		autochdir = false,
 		direction = "float",
-		open_mapping = [[<c-t>]],
+		open_mapping = "<c-t>",
 		terminal_mappings = true,
 		start_in_insert = true,
 		float_opts = {
@@ -24,7 +24,7 @@ local config = function()
 				term.dir = cwd
 			end
 		end,
-	}
+	} ]]
 	local Terminal = require("toggleterm.terminal").Terminal
 	local opts = {
 		noremap = true, -- non-recursive

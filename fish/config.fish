@@ -5,7 +5,7 @@ function fish_prompt
     echo '%s%s%s # '
   else
     echo '%s%s%s $ '
-  end) \ (set_color $fish_color_cwd) (prompt_pwd --full-length-dirs 5) (set_color normal)
+  end) (set_color $fish_color_cwd) (prompt_pwd --full-length-dirs 5) (set_color normal)
 end
 
 fish_add_path -p ~/.cargo/bin ~/.ghcup/bin

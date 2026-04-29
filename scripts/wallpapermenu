@@ -5,10 +5,9 @@ if test -z $argv[1]
 else
 	set chosen (
 		for file in (fd . $argv[1] -t f -d 1)
-			if test -z $IMG; or test $file != $IMG
-				echo -en "$file\0icon\x1fthumbnail://$file\n"
-			end
+			echo -en "$file\0icon\x1fthumbnail://$file\n"
 		end | rofi -dmenu -p " " -show-icons -theme ~/.config/rofi/wallpapermenu.rasi)
-
-	~/.config/scripts/set_background (echo $chosen)
+	if test $chosen != $IMG
+		~/.config/scripts/set_background (echo $chosen)
+	end
 end
